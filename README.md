@@ -13,29 +13,27 @@ Last checked: **2026-10-12**. Sources reviewed; runtimes not tested locally.
 
 ## Contents
 
-- [Popular Projects](#popular-projects)
+- [Popular Applications](#popular-applications)
+- [Community Applications](#community-applications)
 - [Start here](#start-here)
 - [Model at a glance](#model-at-a-glance)
 - [Guides and examples](#guides-and-examples)
 - [Models and runtimes](#models-and-runtimes)
-- [Community tools](#community-tools)
+- [Inference Frameworks and Servers](#inference-frameworks-and-servers)
 - [Practical notes](#practical-notes)
 - [Evaluation](#evaluation)
 
-## Popular Projects
+## Popular Applications
 
-Confirmed second-generation support. GitHub stars as of 2026-10-12, sorted by count; popularity is not retrieval quality.
+Applications built with EmbeddingGemma2. Stars update via Shields.io and may be cached.
 
-| Project                                                                       | Stars   | Use and support evidence                                                                                                                     |
-| ----------------------------------------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Transformers](https://github.com/huggingface/transformers)                   | 167,527 | [Python model and processor APIs](https://huggingface.co/docs/transformers/model_doc/embedding_gemma2).                                      |
-| [llama.cpp](https://github.com/ggml-org/llama.cpp)                            | 130,876 | [Native C/C++; text, vision, and audio support merged](https://github.com/ggml-org/llama.cpp/pull/30054).                                    |
-| [oMLX](https://github.com/jundot/omlx)                                        | 22,717  | [Apple silicon inference server; lists EmbeddingGemma2 support](https://github.com/jundot/omlx).                                             |
-| [Sentence Transformers](https://github.com/huggingface/sentence-transformers) | 19,164  | [Python embeddings; official guide requires 6.1.0+](https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/).                |
-| [Transformers.js](https://github.com/huggingface/transformers.js)             | 16,342  | [Browser / Node.js; added support in 4.3.1](https://github.com/huggingface/transformers.js/releases/tag/4.3.1).                              |
-| [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)                      | 6,645   | [On-device inference; added support in 0.18.0](https://github.com/google-ai-edge/LiteRT-LM).                                                 |
-| [MLX-VLM](https://github.com/Blaizzy/mlx-vlm)                                 | 5,612   | [Native MLX multimodal embeddings on Apple silicon](https://github.com/Blaizzy/mlx-vlm/blob/main/mlx_vlm/models/embedding_gemma2/README.md). |
-| [DigUp](https://github.com/ARahim3/DigUp)                                     | 1,155   | [Local file search across documents, images, audio, and video; Apple silicon, macOS 14+](https://github.com/ARahim3/DigUp).                  |
+| Project                                                                       | Stars                                                                  | Use and support evidence                                                                                                                     |
+| ----------------------------------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| [DigUp](https://github.com/ARahim3/DigUp)                                     | ![Stars](https://img.shields.io/github/stars/ARahim3/DigUp?style=flat) | [Local file search across documents, images, audio, and video; Apple silicon, macOS 14+](https://github.com/ARahim3/DigUp).                  |
+
+## Community Applications
+
+- [Recall](https://github.com/pdstn12/Recall) - Early-stage Linux file search with Rust, GTK 4, and llama.cpp.
 
 ## Start here
 
@@ -75,9 +73,21 @@ The Sentence Transformers tutorials require **6.1.0+**.
 | [LiteRT full model, 740M](https://huggingface.co/litert-community/embeddinggemma-2-740m-litert-lm)                | LiteRT-LM                            | Full multimodal artifact and deployment instructions.                    |
 | [MLX Community collection](https://huggingface.co/collections/mlx-community/embeddinggemma-2)                     | Apple silicon                        | Conversion collection; inspect model cards for runtime/modality support. |
 
-## Community tools
 
-- [Recall](https://github.com/pdstn12/Recall) - Early-stage Linux file search with Rust, GTK 4, and llama.cpp.
+## Inference Frameworks and Servers
+
+Confirmed second-generation support. Stars update via Shields.io and may be cached.
+
+| Project                                                                       | Stars                                                                                      | Use and support evidence                                                                                                                     |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)                      | ![Stars](https://img.shields.io/github/stars/google-ai-edge/LiteRT-LM?style=flat)          | [On-device inference; added support in 0.18.0](https://github.com/google-ai-edge/LiteRT-LM).                                                 |
+| [llama.cpp](https://github.com/ggml-org/llama.cpp)                            | ![Stars](https://img.shields.io/github/stars/ggml-org/llama.cpp?style=flat)                | [Native C/C++; text, vision, and audio support merged](https://github.com/ggml-org/llama.cpp/pull/30054).                                    |
+| [MLX-VLM](https://github.com/Blaizzy/mlx-vlm)                                 | ![Stars](https://img.shields.io/github/stars/Blaizzy/mlx-vlm?style=flat)                   | [Native MLX multimodal embeddings on Apple silicon](https://github.com/Blaizzy/mlx-vlm/blob/main/mlx_vlm/models/embedding_gemma2/README.md). |
+| [oMLX](https://github.com/jundot/omlx)                                        | ![Stars](https://img.shields.io/github/stars/jundot/omlx?style=flat)                       | [Apple silicon inference server; lists EmbeddingGemma2 support](https://github.com/jundot/omlx).                                             |
+| [Sentence Transformers](https://github.com/huggingface/sentence-transformers) | ![Stars](https://img.shields.io/github/stars/huggingface/sentence-transformers?style=flat) | [Python embeddings; official guide requires 6.1.0+](https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/).                |
+| [Transformers](https://github.com/huggingface/transformers)                   | ![Stars](https://img.shields.io/github/stars/huggingface/transformers?style=flat)          | [Python model and processor APIs](https://huggingface.co/docs/transformers/model_doc/embedding_gemma2).                                      |
+| [Transformers.js](https://github.com/huggingface/transformers.js)             | ![Stars](https://img.shields.io/github/stars/huggingface/transformers.js?style=flat)       | [Browser / Node.js; added support in 4.3.1](https://github.com/huggingface/transformers.js/releases/tag/4.3.1).                              |
+
 - [embeddinggemma.c](https://github.com/QuixiAI/embeddinggemma.c) - Native embedding server supporting EmbeddingGemma2 on CPU and Metal (text, image, audio, sampled video, mixed inputs). CUDA, ROCm, and XPU support for v2 is pending; published benchmarks reflect the first-generation 300M model.
 
 ## Practical notes

@@ -33,6 +33,6 @@ Contributions are dedicated under [CC0-1.0](LICENSE). Referenced resources retai
 ## Maintenance
 
 - Use `- [Name](URL) - One-sentence description.` for list entries.
-- Popular projects need 1,000+ stars and documented v2 support; smaller projects belong in community tools. Date star snapshots. This is our editorial threshold.
+- Popular applications need 1,000+ stars and documented v2 support; early-stage applications belong in community applications. Put inference frameworks, libraries, and servers in their own section after model resources, regardless of stars. Use dynamic Shields.io star badges; order projects by use or name, not live star counts. This is our editorial threshold.
 - Run `python3 scripts/check_docs.py` and `npx --yes awesome-lint@2.3.0 README.md`. CI checks external links with Lychee; investigate transient failures before removing entries.
 - Invoke the repository-local `maintain-awesome-list` skill for repeatable updates. It follows the [Awesome guidelines](https://github.com/sindresorhus/awesome/blob/main/pull_request_template.md); it is not an official Awesome skill.

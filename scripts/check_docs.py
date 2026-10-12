@@ -34,9 +34,22 @@ english, chinese = [(ROOT / name).read_text() for name in ("README.md", "README.
 urls = lambda text: {url for url in LINK.findall(text) if url.startswith("https://")}
 if urls(english) != urls(chinese):
     errors.append("README source URLs differ between languages")
-counts = lambda text: re.findall(r"\|\s+([\d,]+)\s+\|", text)
-if counts(english) != counts(chinese):
-    errors.append("README star counts differ between languages")
+def star_badges(text):
+    pairs = []
+    for line in text.splitlines():
+        if not line.startswith("| [") or "img.shields.io/github/stars/" not in line:
+            continue
+        repo = re.search(r"\]\(https://github.com/([^/)]+/[^/)]+)\)", line)
+        badge = re.search(r"img\.shields\.io/github/stars/([^?/)]+/[^?/)]+)\?style=flat", line)
+        if not repo or not badge or repo[1] != badge[1]:
+            errors.append("Star badge does not match its project: " + line)
+        else:
+            pairs.append((repo[1], badge[1]))
+    return pairs
+
+
+if star_badges(english) != star_badges(chinese):
+    errors.append("README star badges differ between languages")
 if errors:
     raise SystemExit("\n".join(errors))
-print("PASS: local links, anchors, whitespace, bilingual URLs and star counts")
+print("PASS: local links, anchors, whitespace, bilingual URLs and star badge targets")

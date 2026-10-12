@@ -13,29 +13,27 @@ EmbeddingGemma2 将文本、代码、图片、视频和音频映射到共享向�
 
 ## 目录
 
-- [热门项目](#热门项目)
+- [热门应用](#热门应用)
+- [社区应用](#社区应用)
 - [从这里开始](#从这里开始)
 - [模型速览](#模型速览)
 - [教程与示例](#教程与示例)
 - [模型与运行时](#模型与运行时)
-- [社区工具](#社区工具)
+- [推理框架与服务](#推理框架与服务)
 - [使用要点](#使用要点)
 - [评测](#评测)
 
-## 热门项目
+## 热门应用
 
-已确认第二代支持；GitHub 星标快照：2026-10-12，按数量排序。星标衡量关注度，不代表检索质量。
+基于 EmbeddingGemma2 的应用。Stars 由 Shields.io 动态获取，可能有缓存延迟。
 
-| 项目                                                                            | Stars   | 用途与支持依据                                                                                                               |
-| ----------------------------------------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------- |
-| [Transformers](https://github.com/huggingface/transformers)                   | 167,527 | [Python 模型与预处理 API](https://huggingface.co/docs/transformers/model_doc/embedding_gemma2).                             |
-| [llama.cpp](https://github.com/ggml-org/llama.cpp)                            | 130,876 | [原生 C/C++；文本、视觉、音频支持已合并](https://github.com/ggml-org/llama.cpp/pull/30054).                                           |
-| [oMLX](https://github.com/jundot/omlx)                                        | 22,717  | [Apple silicon 推理服务，已列出第二代支持](https://github.com/jundot/omlx).                                                        |
-| [Sentence Transformers](https://github.com/huggingface/sentence-transformers) | 19,164  | [Python 向量接口；官方教程要求 6.1.0+](https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/).                 |
-| [Transformers.js](https://github.com/huggingface/transformers.js)             | 16,342  | [浏览器 / Node.js；4.3.1 加入支持](https://github.com/huggingface/transformers.js/releases/tag/4.3.1).                        |
-| [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)                      | 6,645   | [端侧推理；0.18.0 加入支持](https://github.com/google-ai-edge/LiteRT-LM).                                                      |
-| [MLX-VLM](https://github.com/Blaizzy/mlx-vlm)                                 | 5,612   | [Apple silicon 原生 MLX 多模态向量](https://github.com/Blaizzy/mlx-vlm/blob/main/mlx_vlm/models/embedding_gemma2/README.md). |
-| [DigUp](https://github.com/ARahim3/DigUp)                                     | 1,155   | [本地搜索文档、图片、音频和视频；Apple silicon、macOS 14+](https://github.com/ARahim3/DigUp).                                          |
+| 项目                                                                            | Stars                                                                  | 用途与支持依据                                                                                                               |
+| ----------------------------------------------------------------------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| [DigUp](https://github.com/ARahim3/DigUp)                                     | ![Stars](https://img.shields.io/github/stars/ARahim3/DigUp?style=flat) | [本地搜索文档、图片、音频和视频；Apple silicon、macOS 14+](https://github.com/ARahim3/DigUp).                                          |
+
+## 社区应用
+
+- [Recall](https://github.com/pdstn12/Recall) - Linux 本地多模态文件搜索，基于 Rust、GTK 4 和 llama.cpp；早期项目。
 
 ## 从这里开始
 
@@ -75,9 +73,21 @@ Sentence Transformers 教程要求 **6.1.0+**。
 | [LiteRT 完整模型 740M](https://huggingface.co/litert-community/embeddinggemma-2-740m-litert-lm)                | LiteRT-LM                            | 完整多模态文件与部署说明。                 |
 | [MLX Community 合集](https://huggingface.co/collections/mlx-community/embeddinggemma-2)                      | Apple silicon                        | 转换版本合集；运行时与模态支持须查阅各模型卡。       |
 
-## 社区工具
 
-- [Recall](https://github.com/pdstn12/Recall) - Linux 本地多模态文件搜索，基于 Rust、GTK 4 和 llama.cpp；早期项目。
+## 推理框架与服务
+
+已确认第二代支持；Stars 由 Shields.io 动态获取，可能有缓存延迟。
+
+| 项目                                                                            | Stars                                                                                      | 用途与支持依据                                                                                                               |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
+| [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)                      | ![Stars](https://img.shields.io/github/stars/google-ai-edge/LiteRT-LM?style=flat)          | [端侧推理；0.18.0 加入支持](https://github.com/google-ai-edge/LiteRT-LM).                                                      |
+| [llama.cpp](https://github.com/ggml-org/llama.cpp)                            | ![Stars](https://img.shields.io/github/stars/ggml-org/llama.cpp?style=flat)                | [原生 C/C++；文本、视觉、音频支持已合并](https://github.com/ggml-org/llama.cpp/pull/30054).                                           |
+| [MLX-VLM](https://github.com/Blaizzy/mlx-vlm)                                 | ![Stars](https://img.shields.io/github/stars/Blaizzy/mlx-vlm?style=flat)                   | [Apple silicon 原生 MLX 多模态向量](https://github.com/Blaizzy/mlx-vlm/blob/main/mlx_vlm/models/embedding_gemma2/README.md). |
+| [oMLX](https://github.com/jundot/omlx)                                        | ![Stars](https://img.shields.io/github/stars/jundot/omlx?style=flat)                       | [Apple silicon 推理服务，已列出第二代支持](https://github.com/jundot/omlx).                                                        |
+| [Sentence Transformers](https://github.com/huggingface/sentence-transformers) | ![Stars](https://img.shields.io/github/stars/huggingface/sentence-transformers?style=flat) | [Python 向量接口；官方教程要求 6.1.0+](https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/).                 |
+| [Transformers](https://github.com/huggingface/transformers)                   | ![Stars](https://img.shields.io/github/stars/huggingface/transformers?style=flat)          | [Python 模型与预处理 API](https://huggingface.co/docs/transformers/model_doc/embedding_gemma2).                             |
+| [Transformers.js](https://github.com/huggingface/transformers.js)             | ![Stars](https://img.shields.io/github/stars/huggingface/transformers.js?style=flat)       | [浏览器 / Node.js；4.3.1 加入支持](https://github.com/huggingface/transformers.js/releases/tag/4.3.1).                        |
+
 - [embeddinggemma.c](https://github.com/QuixiAI/embeddinggemma.c) - 原生嵌入服务，第二代 profile 支持 CPU 与 Metal（文本、图片、音频、视频采样帧及混合输入）。第二代 CUDA、ROCm 与 XPU 支持仍待实现；已发布的 300M 评测反映第一代。
 
 ## 使用要点

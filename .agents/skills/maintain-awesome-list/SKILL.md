@@ -12,9 +12,9 @@ Repository-local workflow, based on primary Awesome guidance. This is a custom s
 1. Read `git status --short`, both READMEs, and `CONTRIBUTING.md`. Preserve unrelated edits.
 2. Search official documentation, release notes, and project repositories. Confirm EmbeddingGemma **2** support; first-generation support is insufficient.
 3. For GitHub projects, check archived status, documentation, recent activity, license, and stars with `gh api repos/OWNER/REPO`. Stars measure attention, not quality. Review release notes or implementation evidence before claiming support.
-4. Keep popular projects separate from early-stage examples. For this list, the popular section requires at least 1,000 stars plus documented second-generation support. This threshold is a local editorial choice, not an Awesome rule. Refresh counts together, date the snapshot, and sort descending.
+4. Keep popular applications separate from early-stage applications. Place inference frameworks, libraries, and servers in a separate section after model resources; their star counts do not qualify them as applications. For this list, the popular section requires at least 1,000 stars plus documented second-generation support. This threshold is a local editorial choice, not an Awesome rule. Use dynamic Shields.io star badges. Order projects by use or name, not live star counts.
 5. Write one useful sentence per entry: what it does, where it runs, and any material support restriction. Keep runtime measurements distinct from documented claims. Do not pad the list with generic tools.
-6. Update both language editions together. Retain equivalent URLs, restrictions, versions, and counts. Put contributor instructions in `CONTRIBUTING.md`.
+6. Update both language editions together. Retain equivalent URLs, restrictions, versions, and badge targets. Put contributor instructions in `CONTRIBUTING.md`.
 7. Run `python3 scripts/check_docs.py` and `npx --yes awesome-lint@2.3.0 README.md`. Check changed external destinations; a timeout or 403 is inconclusive, not proof of abandonment. CI also runs Lychee.
 8. Report changes and actual verification briefly. Do not commit, push, or submit to another list unless requested.
 
