@@ -2,7 +2,7 @@
 
 - Resource URL:
 - Why it belongs here:
-- Evidence of EmbeddingGemma 2 support:
+- Evidence of EmbeddingGemma2 support:
 - Verification date and method:
 
 ## Checks

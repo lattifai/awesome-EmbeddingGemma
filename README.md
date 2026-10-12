@@ -3,11 +3,11 @@
 
 # Awesome EmbeddingGemma [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> Local multimodal search with Google’s **EmbeddingGemma 2**.
+> Local multimodal search with Google’s **EmbeddingGemma2**.
 
 [简体中文](README.zh-CN.md) · [Contributing](CONTRIBUTING.md)
 
-EmbeddingGemma 2 maps text, code, images, video, and audio into a shared embedding space. This list covers resources supporting the **second generation** (distinct from EmbeddingGemma 300M and Gemini Embedding 2).
+EmbeddingGemma2 maps text, code, images, video, and audio into a shared embedding space. This list covers resources supporting the **second generation** (distinct from EmbeddingGemma 300M and Gemini Embedding 2).
 
 Last checked: **2026-10-12**. Sources reviewed; runtimes not tested locally.
 
@@ -30,7 +30,7 @@ Confirmed second-generation support. GitHub stars as of 2026-10-12, sorted by co
 | ----------------------------------------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Transformers](https://github.com/huggingface/transformers)                   | 167,527 | [Python model and processor APIs](https://huggingface.co/docs/transformers/model_doc/embedding_gemma2).                                      |
 | [llama.cpp](https://github.com/ggml-org/llama.cpp)                            | 130,876 | [Native C/C++; text, vision, and audio support merged](https://github.com/ggml-org/llama.cpp/pull/30054).                                    |
-| [oMLX](https://github.com/jundot/omlx)                                        | 22,717  | [Apple silicon inference server; lists EmbeddingGemma 2 support](https://github.com/jundot/omlx).                                            |
+| [oMLX](https://github.com/jundot/omlx)                                        | 22,717  | [Apple silicon inference server; lists EmbeddingGemma2 support](https://github.com/jundot/omlx).                                             |
 | [Sentence Transformers](https://github.com/huggingface/sentence-transformers) | 19,164  | [Python embeddings; official guide requires 6.1.0+](https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/).                |
 | [Transformers.js](https://github.com/huggingface/transformers.js)             | 16,342  | [Browser / Node.js; added support in 4.3.1](https://github.com/huggingface/transformers.js/releases/tag/4.3.1).                              |
 | [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)                      | 6,645   | [On-device inference; added support in 0.18.0](https://github.com/google-ai-edge/LiteRT-LM).                                                 |
@@ -78,7 +78,7 @@ The Sentence Transformers tutorials require **6.1.0+**.
 ## Community tools
 
 - [Recall](https://github.com/pdstn12/Recall) - Early-stage Linux file search with Rust, GTK 4, and llama.cpp.
-- [embeddinggemma.c](https://github.com/QuixiAI/embeddinggemma.c) - Native embedding server supporting EmbeddingGemma 2 on CPU and Metal (text, image, audio, sampled video, mixed inputs). CUDA, ROCm, and XPU support for v2 is pending; published benchmarks reflect the first-generation 300M model.
+- [embeddinggemma.c](https://github.com/QuixiAI/embeddinggemma.c) - Native embedding server supporting EmbeddingGemma2 on CPU and Metal (text, image, audio, sampled video, mixed inputs). CUDA, ROCm, and XPU support for v2 is pending; published benchmarks reflect the first-generation 300M model.
 
 ## Practical notes
 

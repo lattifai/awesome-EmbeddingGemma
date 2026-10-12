@@ -3,11 +3,11 @@
 
 # Awesome EmbeddingGemma [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> 用 Google **EmbeddingGemma 2** 构建本地多模态搜索。
+> 用 Google **EmbeddingGemma2** 构建本地多模态搜索。
 
 [English](README.md) · [贡献指南](CONTRIBUTING.md)
 
-EmbeddingGemma 2 将文本、代码、图片、视频和音频映射到共享向量空间。本清单聚焦明确支持**第二代**的资源（区别于 EmbeddingGemma 300M 与 Gemini Embedding 2）。
+EmbeddingGemma2 将文本、代码、图片、视频和音频映射到共享向量空间。本清单聚焦明确支持**第二代**的资源（区别于 EmbeddingGemma 300M 与 Gemini Embedding 2）。
 
 核查日期：**2026-10-12**。已核对来源，未本地实测。
 

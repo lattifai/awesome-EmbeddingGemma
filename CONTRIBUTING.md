@@ -2,7 +2,7 @@
 
 ## Inclusion criteria
 
-- Explicitly support EmbeddingGemma 2 (do not infer support from EmbeddingGemma 300M).
+- Explicitly support EmbeddingGemma2 (do not infer support from EmbeddingGemma 300M).
 - Prefer original documentation, repositories, and reproducible demonstrations.
 - Disclose modality, backend, or version constraints.
 - Avoid generic directories, affiliate links, duplicates, and unverified performance claims.
