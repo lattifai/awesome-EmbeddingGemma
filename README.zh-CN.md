@@ -15,6 +15,7 @@ EmbeddingGemma2 将文本、代码、图片、视频和音频映射到共享向�
 
 - [热门应用](#热门应用)
 - [社区应用](#社区应用)
+- [微调与决策模型](#微调与决策模型)
 - [从这里开始](#从这里开始)
 - [模型速览](#模型速览)
 - [教程与示例](#教程与示例)
@@ -34,6 +35,13 @@ EmbeddingGemma2 将文本、代码、图片、视频和音频映射到共享向�
 ## 社区应用
 
 - [Recall](https://github.com/pdstn12/Recall) - Linux 本地多模态文件搜索，基于 Rust、GTK 4 和 llama.cpp；早期项目。
+
+## 微调与决策模型
+
+- [EG2 Typed Decision](https://huggingface.co/mrm8488/embeddinggemma-2-ft-typed-decision) - 基于 EmbeddingGemma2 文本编码器和约 0.5M 参数决策头，输出 `choice`、`noul`（布尔）与 `score` 及概率；提供权重、推理代码和继续微调示例。
+- [Typed Decisions](https://huggingface.co/datasets/LocalLLaMA/typed-decisions) - 上述模型的训练与评测数据，覆盖 Agent 检查、客服、发票和安全事件；指标衡量与教师标签的一致性。
+
+模型作者披露调参时查看过测试集；其微调结果不能与数据集的零样本榜单直接比较。
 
 ## 从这里开始
 

@@ -15,6 +15,7 @@ Last checked: **2026-10-12**. Sources reviewed; runtimes not tested locally.
 
 - [Popular Applications](#popular-applications)
 - [Community Applications](#community-applications)
+- [Fine-tuning and Decision Models](#fine-tuning-and-decision-models)
 - [Start here](#start-here)
 - [Model at a glance](#model-at-a-glance)
 - [Guides and examples](#guides-and-examples)
@@ -34,6 +35,13 @@ Applications built with EmbeddingGemma2. Stars update via Shields.io and may be 
 ## Community Applications
 
 - [Recall](https://github.com/pdstn12/Recall) - Early-stage Linux file search with Rust, GTK 4, and llama.cpp.
+
+## Fine-tuning and Decision Models
+
+- [EG2 Typed Decision](https://huggingface.co/mrm8488/embeddinggemma-2-ft-typed-decision) - EmbeddingGemma2 text encoder with a roughly 0.5M-parameter head for `choice`, `noul` (Boolean), and `score` decisions with probabilities; includes weights, inference code, and further fine-tuning examples.
+- [Typed Decisions](https://huggingface.co/datasets/LocalLLaMA/typed-decisions) - Training and evaluation data used by the model above, covering agent checks, support tickets, invoices, and security incidents; metrics measure agreement with teacher labels.
+
+The model author selected hyperparameters while inspecting the test split; its fine-tuned results are not directly comparable with the dataset's zero-shot leaderboard.
 
 ## Start here
 
