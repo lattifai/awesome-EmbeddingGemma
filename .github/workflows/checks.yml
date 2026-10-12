@@ -1,0 +1,25 @@
+name: Check list
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python3 scripts/check_docs.py
+      - run: npx --yes awesome-lint@2.3.0 README.md
+      - uses: lycheeverse/lychee-action@v2.9.0
+        with:
+          args: --no-progress --max-retries 2 --timeout 30 README.md README.zh-CN.md CONTRIBUTING.md
+          fail: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

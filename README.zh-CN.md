@@ -1,0 +1,96 @@
+<!-- Repeated links provide sources in multiple sections. -->
+<!--lint disable double-link-->
+
+# Awesome EmbeddingGemma [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+
+> 用 Google **EmbeddingGemma 2** 构建本地多模态搜索。
+
+[English](README.md) · [贡献指南](CONTRIBUTING.md)
+
+EmbeddingGemma 2 将文本、代码、图片、视频和音频映射到共享向量空间。本清单聚焦明确支持**第二代**的资源（区别于 EmbeddingGemma 300M 与 Gemini Embedding 2）。
+
+核查日期：**2026-10-12**。已核对来源，未本地实测。
+
+## 目录
+
+- [热门项目](#热门项目)
+- [从这里开始](#从这里开始)
+- [模型速览](#模型速览)
+- [教程与示例](#教程与示例)
+- [模型与运行时](#模型与运行时)
+- [社区工具](#社区工具)
+- [使用要点](#使用要点)
+- [评测](#评测)
+
+## 热门项目
+
+已确认第二代支持；GitHub 星标快照：2026-10-12，按数量排序。星标衡量关注度，不代表检索质量。
+
+| 项目                                                                            | Stars   | 用途与支持依据                                                                                                               |
+| ----------------------------------------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------- |
+| [Transformers](https://github.com/huggingface/transformers)                   | 167,527 | [Python 模型与预处理 API](https://huggingface.co/docs/transformers/model_doc/embedding_gemma2).                             |
+| [llama.cpp](https://github.com/ggml-org/llama.cpp)                            | 130,876 | [原生 C/C++；文本、视觉、音频支持已合并](https://github.com/ggml-org/llama.cpp/pull/30054).                                           |
+| [oMLX](https://github.com/jundot/omlx)                                        | 22,717  | [Apple silicon 推理服务，已列出第二代支持](https://github.com/jundot/omlx).                                                        |
+| [Sentence Transformers](https://github.com/huggingface/sentence-transformers) | 19,164  | [Python 向量接口；官方教程要求 6.1.0+](https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/).                 |
+| [Transformers.js](https://github.com/huggingface/transformers.js)             | 16,342  | [浏览器 / Node.js；4.3.1 加入支持](https://github.com/huggingface/transformers.js/releases/tag/4.3.1).                        |
+| [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)                      | 6,645   | [端侧推理；0.18.0 加入支持](https://github.com/google-ai-edge/LiteRT-LM).                                                      |
+| [MLX-VLM](https://github.com/Blaizzy/mlx-vlm)                                 | 5,612   | [Apple silicon 原生 MLX 多模态向量](https://github.com/Blaizzy/mlx-vlm/blob/main/mlx_vlm/models/embedding_gemma2/README.md). |
+| [DigUp](https://github.com/ARahim3/DigUp)                                     | 1,155   | [本地搜索文档、图片、音频和视频；Apple silicon、macOS 14+](https://github.com/ARahim3/DigUp).                                          |
+
+## 从这里开始
+
+- [官方模型主页](https://deepmind.google/models/gemma/embeddinggemma/) - Google DeepMind 模型介绍与资源入口。
+- [模型卡](https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2) - 架构、评测、输入约束与局限。
+- [原始权重](https://huggingface.co/google/embeddinggemma-2) - Google 官方权重与配置。
+- [开发者指南](https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/) - 架构概览、模块化加载与应用示例。
+
+## 模型速览
+
+| 项目   | 内容                                           |
+| ---- | -------------------------------------------- |
+| 输入   | 文本/代码、图片、视频、音频及混合输入                          |
+| 参数量  | 纯文本 270M；文本 + 视觉 440M；文本 + 音频 570M；完整模型 740M |
+| 上下文  | 各模态共享 8,192 token                            |
+| 向量维度 | 原生 768（支持截短至 512 / 256 / 128）                |
+| 模型许可 | Apache-2.0（请查阅权重许可及相关政策）                     |
+
+来源：[模型卡](https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2)、[开发者指南](https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/)。
+
+## 教程与示例
+
+- [Sentence Transformers 文本教程](https://ai.google.dev/gemma/docs/embeddinggemma/inference-embeddinggemma-with-sentence-transformers) - 官方 Python 文本检索指南。
+- [Sentence Transformers 多模态教程](https://ai.google.dev/gemma/docs/embeddinggemma/multimodal-embeddinggemma-with-sentence-transformers) - 媒体与混合输入官方示例。
+- [Transformers 模型文档](https://huggingface.co/docs/transformers/model_doc/embedding_gemma2) - 底层模型与处理器 API。
+
+Sentence Transformers 教程要求 **6.1.0+**。
+
+## 模型与运行时
+
+| 资源                                                                                                         | 使用路线                                 | 注意事项                          |
+| ---------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------- |
+| [Google 原始权重](https://huggingface.co/google/embeddinggemma-2)                                              | Sentence Transformers / Transformers | 参考权重；小工作负载可关闭未使用的编码器。         |
+| [ONNX Community 转换](https://huggingface.co/onnx-community/embeddinggemma-2-ONNX)                           | Transformers.js                      | 包含浏览器/Node.js 示例及后端/dtype 说明。 |
+| [LiteRT 纯文本 270M](https://huggingface.co/litert-community/embeddinggemma-2-text-270m-litert-lm)            | LiteRT-LM                            | 纯文本模型文件。                      |
+| [LiteRT 文本 + 视觉 440M](https://huggingface.co/litert-community/embeddinggemma-2-text-vision-440m-litert-lm) | LiteRT-LM                            | 视觉模型文件；输入范围见模型卡。              |
+| [LiteRT 完整模型 740M](https://huggingface.co/litert-community/embeddinggemma-2-740m-litert-lm)                | LiteRT-LM                            | 完整多模态文件与部署说明。                 |
+| [MLX Community 合集](https://huggingface.co/collections/mlx-community/embeddinggemma-2)                      | Apple silicon                        | 转换版本合集；运行时与模态支持须查阅各模型卡。       |
+
+## 社区工具
+
+- [Recall](https://github.com/pdstn12/Recall) - Linux 本地多模态文件搜索，基于 Rust、GTK 4 和 llama.cpp；早期项目。
+- [embeddinggemma.c](https://github.com/QuixiAI/embeddinggemma.c) - 原生嵌入服务，第二代 profile 支持 CPU 与 Metal（文本、图片、音频、视频采样帧及混合输入）。第二代 CUDA、ROCm 与 XPU 支持仍待实现；已发布的 300M 评测反映第一代。
+
+## 使用要点
+
+- 按[模型卡](https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2)使用任务前缀，检索查询和文档前缀不同。
+- 截短向量后重新归一化，查询与文档维度保持一致。多模态检索使用 128 维需仔细验证。
+- 参考权重使用 BF16 或 FP32（避免 FP16）。转换运行时参见各自的 [dtype 说明](https://huggingface.co/onnx-community/embeddinggemma-2-ONNX)。
+- 各模态共享 8,192 token 预算。音频分段与视频采样前请查阅[多模态预处理说明](https://ai.google.dev/gemma/docs/embeddinggemma/multimodal-embeddinggemma-with-sentence-transformers)。
+
+## 评测
+
+[官方评测表](https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2#benchmark-results)包含文本、代码、图片、视觉文档、视频、音频及截短维度结果（发布方数据，未在本地复现）。社区评测提交要求详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
+## 参与贡献
+
+欢迎提交第二代相关资源。详情见[贡献指南](CONTRIBUTING.md)。
