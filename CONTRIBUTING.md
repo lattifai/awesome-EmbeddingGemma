@@ -36,3 +36,7 @@ Contributions are dedicated under [CC0-1.0](LICENSE). Referenced resources retai
 - Popular applications need 1,000+ stars and documented v2 support; early-stage applications belong in community applications. Put inference frameworks, libraries, and servers in their own section after model resources, regardless of stars. Use dynamic Shields.io star badges; order projects by use or name, not live star counts. This is our editorial threshold.
 - Run `python3 scripts/check_docs.py` and `npx --yes awesome-lint@2.3.0 README.md`. CI checks external links with Lychee; investigate transient failures before removing entries.
 - Invoke the repository-local `maintain-awesome-list` skill for repeatable updates. It follows the [Awesome guidelines](https://github.com/sindresorhus/awesome/blob/main/pull_request_template.md); it is not an official Awesome skill.
+
+### Maintainer automation
+
+The maintainer has authorized list updates and maintenance-rule changes to be committed and pushed to `origin/main` after the required checks and explicit AGY approval of the final diff, without another confirmation. The [maintenance skill](.agents/skills/maintain-awesome-list/SKILL.md#agy-review-and-publishing) defines the review, author identity, scope isolation, and remote verification procedure. Failed or unavailable review, unresolved blocking findings, or unexpected remote history stop publication. This authorization does not cover repository settings, releases, external submissions, or contacting authors; contributors can continue to submit pull requests normally.
