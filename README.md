@@ -9,7 +9,7 @@
 
 EmbeddingGemma2 maps text, code, images, video, and audio into a shared embedding space. This list covers resources supporting the **second generation** (distinct from EmbeddingGemma 300M and Gemini Embedding 2).
 
-Last checked: **2026-10-12**; new community entries checked **2026-10-13**. Sources reviewed; runtimes not tested locally.
+Last checked: **2026-10-12**; new and updated community entries checked **2026-10-13**. Sources reviewed; runtimes not tested locally.
 
 ## Contents
 
@@ -43,6 +43,7 @@ Applications built with EmbeddingGemma2. Stars update via Shields.io and may be 
 
 - [EG2 Typed Decision](https://huggingface.co/mrm8488/embeddinggemma-2-ft-typed-decision) - EmbeddingGemma2 text encoder with a roughly 0.5M-parameter head for `choice`, `noul` (Boolean), and `score` decisions with probabilities; includes weights, inference code, and further fine-tuning examples.
 - [Typed Decisions](https://huggingface.co/datasets/LocalLLaMA/typed-decisions) - Training and evaluation data used by the model above, covering agent checks, support tickets, invoices, and security incidents; metrics measure agreement with teacher labels.
+- [Typed Decision GGUF](https://huggingface.co/cstr/embeddinggemma-2-ft-typed-decision-GGUF) - Complete fine-tuned encoder and decision head in FP32/Q8 GGUF; requires CrispEmbed rather than stock llama.cpp, with only small-scale numerical parity checks reported.
 
 The model author selected hyperparameters while inspecting the test split; its fine-tuned results are not directly comparable with the dataset's zero-shot leaderboard.
 
@@ -75,19 +76,21 @@ Sources: [model card](https://ai.google.dev/gemma/docs/embeddinggemma/model_card
 - [Multimodal embeddings with Sentence Transformers](https://ai.google.dev/gemma/docs/embeddinggemma/multimodal-embeddinggemma-with-sentence-transformers) - Media and mixed-input examples.
 - [Transformers model documentation](https://huggingface.co/docs/transformers/model_doc/embedding_gemma2) - Lower-level model and processor APIs.
 - [Minimal multimodal search](https://github.com/ranjankndev/embeddinggemma2-search) - A small Python example for local text, image, audio, and video retrieval using NumPy vectors, without a database or UI.
+- [UI Search](https://github.com/sai-prakash/ui-screenshot-search) - Browser demo using Transformers.js to find UI components by text or screenshot; limited to 19 sample components, with no screenshot retrieval accuracy evaluation yet.
 
 The Sentence Transformers tutorials require **6.1.0+**.
 
 ## Models and runtimes
 
-| Resource                                                                                                          | Route                                | Notes                                                                    |
-| ----------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------ |
-| [Google checkpoint](https://huggingface.co/google/embeddinggemma-2)                                               | Sentence Transformers / Transformers | Reference weights; disable unused encoders for smaller workloads.        |
-| [ONNX Community conversion](https://huggingface.co/onnx-community/embeddinggemma-2-ONNX)                          | Transformers.js                      | Browser/Node.js examples and backend/dtype guidance.                     |
-| [LiteRT text, 270M](https://huggingface.co/litert-community/embeddinggemma-2-text-270m-litert-lm)                 | LiteRT-LM                            | Text-only artifact.                                                      |
-| [LiteRT text + vision, 440M](https://huggingface.co/litert-community/embeddinggemma-2-text-vision-440m-litert-lm) | LiteRT-LM                            | Vision-enabled artifact; see supported-input table.                      |
-| [LiteRT full model, 740M](https://huggingface.co/litert-community/embeddinggemma-2-740m-litert-lm)                | LiteRT-LM                            | Full multimodal artifact and deployment instructions.                    |
-| [MLX Community collection](https://huggingface.co/collections/mlx-community/embeddinggemma-2)                     | Apple silicon                        | Conversion collection; inspect model cards for runtime/modality support. |
+| Resource                                                                                                          | Route                                | Notes                                                                                                                     |
+| ----------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| [Google checkpoint](https://huggingface.co/google/embeddinggemma-2)                                               | Sentence Transformers / Transformers | Reference weights; disable unused encoders for smaller workloads.                                                         |
+| [ONNX Community conversion](https://huggingface.co/onnx-community/embeddinggemma-2-ONNX)                          | Transformers.js                      | Browser/Node.js examples and backend/dtype guidance.                                                                      |
+| [LiteRT text, 270M](https://huggingface.co/litert-community/embeddinggemma-2-text-270m-litert-lm)                 | LiteRT-LM                            | Text-only artifact.                                                                                                       |
+| [LiteRT text + vision, 440M](https://huggingface.co/litert-community/embeddinggemma-2-text-vision-440m-litert-lm) | LiteRT-LM                            | Vision-enabled artifact; see supported-input table.                                                                       |
+| [LiteRT full model, 740M](https://huggingface.co/litert-community/embeddinggemma-2-740m-litert-lm)                | LiteRT-LM                            | Full multimodal artifact and deployment instructions.                                                                     |
+| [MLX Community collection](https://huggingface.co/collections/mlx-community/embeddinggemma-2)                     | Apple silicon                        | Conversion collection; inspect model cards for runtime/modality support.                                                  |
+| [FluidInference Core ML](https://huggingface.co/FluidInference/embeddinggemma-2-coreml)                           | Apple Neural Engine / GPU            | Text on Neural Engine, image/audio on GPU; macOS 15 / iOS 18+, text limited to 512 tokens and audio to 10-second windows. |
 
 
 ## Inference Frameworks and Servers
@@ -104,7 +107,7 @@ Confirmed second-generation support. Stars update via Shields.io and may be cach
 | [Transformers](https://github.com/huggingface/transformers)                   | ![Stars](https://img.shields.io/github/stars/huggingface/transformers?style=flat)          | [Python model and processor APIs](https://huggingface.co/docs/transformers/model_doc/embedding_gemma2).                                      |
 | [Transformers.js](https://github.com/huggingface/transformers.js)             | ![Stars](https://img.shields.io/github/stars/huggingface/transformers.js?style=flat)       | [Browser / Node.js; added support in 4.3.1](https://github.com/huggingface/transformers.js/releases/tag/4.3.1).                              |
 
-- [embeddinggemma.c](https://github.com/QuixiAI/embeddinggemma.c) - Native embedding server supporting EmbeddingGemma2 on CPU and Metal (text, image, audio, sampled video, mixed inputs). CUDA, ROCm, and XPU support for v2 is pending; published benchmarks reflect the first-generation 300M model.
+- [embeddinggemma.c](https://github.com/QuixiAI/embeddinggemma.c) - Native embedding server supporting EmbeddingGemma2 on CPU, Metal, and [CUDA](https://github.com/QuixiAI/embeddinggemma.c/commit/6f4c2e713ed1d71519334ce159c57f5e592f76e1) (text, image, audio, sampled video, mixed inputs); v2 ROCm/XPU support is pending, and 300M benchmarks describe the first generation.
 
 ## Practical notes
 

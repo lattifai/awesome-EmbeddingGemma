@@ -9,7 +9,7 @@
 
 EmbeddingGemma2 将文本、代码、图片、视频和音频映射到共享向量空间。本清单聚焦明确支持**第二代**的资源（区别于 EmbeddingGemma 300M 与 Gemini Embedding 2）。
 
-核查日期：**2026-10-12**；新增社区条目于 **2026-10-13** 核查。已核对来源，未本地实测。
+核查日期：**2026-10-12**；新增及更新社区条目于 **2026-10-13** 核查。已核对来源，未本地实测。
 
 ## 目录
 
@@ -43,6 +43,7 @@ EmbeddingGemma2 将文本、代码、图片、视频和音频映射到共享向�
 
 - [EG2 Typed Decision](https://huggingface.co/mrm8488/embeddinggemma-2-ft-typed-decision) - 基于 EmbeddingGemma2 文本编码器和约 0.5M 参数决策头，输出 `choice`、`noul`（布尔）与 `score` 及概率；提供权重、推理代码和继续微调示例。
 - [Typed Decisions](https://huggingface.co/datasets/LocalLLaMA/typed-decisions) - 上述模型的训练与评测数据，覆盖 Agent 检查、客服、发票和安全事件；指标衡量与教师标签的一致性。
+- [Typed Decision GGUF](https://huggingface.co/cstr/embeddinggemma-2-ft-typed-decision-GGUF) - 完整微调编码器与决策头的 FP32/Q8 GGUF 转换版；需要 CrispEmbed，不能直接用于标准 llama.cpp，作者仅报告小规模数值对齐验证。
 
 模型作者披露调参时查看过测试集；其微调结果不能与数据集的零样本榜单直接比较。
 
@@ -75,19 +76,21 @@ EmbeddingGemma2 将文本、代码、图片、视频和音频映射到共享向�
 - [Sentence Transformers 多模态教程](https://ai.google.dev/gemma/docs/embeddinggemma/multimodal-embeddinggemma-with-sentence-transformers) - 媒体与混合输入官方示例。
 - [Transformers 模型文档](https://huggingface.co/docs/transformers/model_doc/embedding_gemma2) - 底层模型与处理器 API。
 - [最小多模态搜索示例](https://github.com/ranjankndev/embeddinggemma2-search) - 用少量 Python 文件和 NumPy 向量实现本地文本、图片、音频与视频检索，无需数据库或 UI。
+- [UI Search](https://github.com/sai-prakash/ui-screenshot-search) - 基于 Transformers.js 的浏览器示例，用文字或截图检索 UI 组件；当前只有 19 个示例组件，截图检索尚无准确率评测。
 
 Sentence Transformers 教程要求 **6.1.0+**。
 
 ## 模型与运行时
 
-| 资源                                                                                                         | 使用路线                                 | 注意事项                          |
-| ---------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------- |
-| [Google 原始权重](https://huggingface.co/google/embeddinggemma-2)                                              | Sentence Transformers / Transformers | 参考权重；小工作负载可关闭未使用的编码器。         |
-| [ONNX Community 转换](https://huggingface.co/onnx-community/embeddinggemma-2-ONNX)                           | Transformers.js                      | 包含浏览器/Node.js 示例及后端/dtype 说明。 |
-| [LiteRT 纯文本 270M](https://huggingface.co/litert-community/embeddinggemma-2-text-270m-litert-lm)            | LiteRT-LM                            | 纯文本模型文件。                      |
-| [LiteRT 文本 + 视觉 440M](https://huggingface.co/litert-community/embeddinggemma-2-text-vision-440m-litert-lm) | LiteRT-LM                            | 视觉模型文件；输入范围见模型卡。              |
-| [LiteRT 完整模型 740M](https://huggingface.co/litert-community/embeddinggemma-2-740m-litert-lm)                | LiteRT-LM                            | 完整多模态文件与部署说明。                 |
-| [MLX Community 合集](https://huggingface.co/collections/mlx-community/embeddinggemma-2)                      | Apple silicon                        | 转换版本合集；运行时与模态支持须查阅各模型卡。       |
+| 资源                                                                                                         | 使用路线                                 | 注意事项                                                                          |
+| ---------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------- |
+| [Google 原始权重](https://huggingface.co/google/embeddinggemma-2)                                              | Sentence Transformers / Transformers | 参考权重；小工作负载可关闭未使用的编码器。                                                         |
+| [ONNX Community 转换](https://huggingface.co/onnx-community/embeddinggemma-2-ONNX)                           | Transformers.js                      | 包含浏览器/Node.js 示例及后端/dtype 说明。                                                 |
+| [LiteRT 纯文本 270M](https://huggingface.co/litert-community/embeddinggemma-2-text-270m-litert-lm)            | LiteRT-LM                            | 纯文本模型文件。                                                                      |
+| [LiteRT 文本 + 视觉 440M](https://huggingface.co/litert-community/embeddinggemma-2-text-vision-440m-litert-lm) | LiteRT-LM                            | 视觉模型文件；输入范围见模型卡。                                                              |
+| [LiteRT 完整模型 740M](https://huggingface.co/litert-community/embeddinggemma-2-740m-litert-lm)                | LiteRT-LM                            | 完整多模态文件与部署说明。                                                                 |
+| [MLX Community 合集](https://huggingface.co/collections/mlx-community/embeddinggemma-2)                      | Apple silicon                        | 转换版本合集；运行时与模态支持须查阅各模型卡。                                                       |
+| [FluidInference Core ML](https://huggingface.co/FluidInference/embeddinggemma-2-coreml)                    | Apple Neural Engine / GPU            | 文本走 Neural Engine，图片/音频走 GPU；macOS 15 / iOS 18 起，文本最多 512 token，音频按 10 秒窗口处理。 |
 
 
 ## 推理框架与服务
@@ -104,7 +107,7 @@ Sentence Transformers 教程要求 **6.1.0+**。
 | [Transformers](https://github.com/huggingface/transformers)                   | ![Stars](https://img.shields.io/github/stars/huggingface/transformers?style=flat)          | [Python 模型与预处理 API](https://huggingface.co/docs/transformers/model_doc/embedding_gemma2).                             |
 | [Transformers.js](https://github.com/huggingface/transformers.js)             | ![Stars](https://img.shields.io/github/stars/huggingface/transformers.js?style=flat)       | [浏览器 / Node.js；4.3.1 加入支持](https://github.com/huggingface/transformers.js/releases/tag/4.3.1).                        |
 
-- [embeddinggemma.c](https://github.com/QuixiAI/embeddinggemma.c) - 原生嵌入服务，第二代 profile 支持 CPU 与 Metal（文本、图片、音频、视频采样帧及混合输入）。第二代 CUDA、ROCm 与 XPU 支持仍待实现；已发布的 300M 评测反映第一代。
+- [embeddinggemma.c](https://github.com/QuixiAI/embeddinggemma.c) - 原生嵌入服务，第二代支持 CPU、Metal 与 [CUDA](https://github.com/QuixiAI/embeddinggemma.c/commit/6f4c2e713ed1d71519334ce159c57f5e592f76e1)（文本、图片、音频、视频采样帧及混合输入）；第二代 ROCm/XPU 支持仍待实现，300M 评测反映第一代。
 
 ## 使用要点
 
