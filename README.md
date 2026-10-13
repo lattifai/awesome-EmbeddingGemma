@@ -44,8 +44,11 @@ Applications built with EmbeddingGemma2. Stars update via Shields.io and may be 
 - [EG2 Typed Decision](https://huggingface.co/mrm8488/embeddinggemma-2-ft-typed-decision) - EmbeddingGemma2 text encoder with a roughly 0.5M-parameter head for `choice`, `noul` (Boolean), and `score` decisions with probabilities; includes weights, inference code, and further fine-tuning examples.
 - [Typed Decisions](https://huggingface.co/datasets/LocalLLaMA/typed-decisions) - Training and evaluation data used by the model above, covering agent checks, support tickets, invoices, and security incidents; metrics measure agreement with teacher labels.
 - [Typed Decision GGUF](https://huggingface.co/cstr/embeddinggemma-2-ft-typed-decision-GGUF) - Complete fine-tuned encoder and decision head in FP32/Q8 GGUF; requires CrispEmbed rather than stock llama.cpp, with only small-scale numerical parity checks reported.
+- [Typed Decision Core ML](https://github.com/mikolaj92/embeddinggemma-typed-decisions-coreml) - Adaptation of the same fine-tuned model for macOS 15+ Apple silicon, without retraining; locally converted Core ML encoder uses CPU/Neural Engine with the original FP32 decision head on CPU, fixed token buckets, and overlength rejection.
 
 The model author selected hyperparameters while inspecting the test split; its fine-tuned results are not directly comparable with the dataset's zero-shot leaderboard.
+
+Core ML adaptation checked **2026-10-14** against its documentation and implementation; author-reported parity checks do not establish task accuracy or exclusive Neural Engine execution.
 
 ## Decision Application Examples
 

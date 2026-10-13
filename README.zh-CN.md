@@ -44,8 +44,11 @@ EmbeddingGemma2 将文本、代码、图片、视频和音频映射到共享向�
 - [EG2 Typed Decision](https://huggingface.co/mrm8488/embeddinggemma-2-ft-typed-decision) - 基于 EmbeddingGemma2 文本编码器和约 0.5M 参数决策头，输出 `choice`、`noul`（布尔）与 `score` 及概率；提供权重、推理代码和继续微调示例。
 - [Typed Decisions](https://huggingface.co/datasets/LocalLLaMA/typed-decisions) - 上述模型的训练与评测数据，覆盖 Agent 检查、客服、发票和安全事件；指标衡量与教师标签的一致性。
 - [Typed Decision GGUF](https://huggingface.co/cstr/embeddinggemma-2-ft-typed-decision-GGUF) - 完整微调编码器与决策头的 FP32/Q8 GGUF 转换版；需要 CrispEmbed，不能直接用于标准 llama.cpp，作者仅报告小规模数值对齐验证。
+- [Typed Decision Core ML](https://github.com/mikolaj92/embeddinggemma-typed-decisions-coreml) - 同一微调模型的 macOS 15+ Apple silicon 适配，无重新训练；需本地转换，Core ML 编码器使用 CPU/Neural Engine，原 FP32 决策头运行于 CPU，采用固定 token 桶并拒绝超长输入。
 
 模型作者披露调参时查看过测试集；其微调结果不能与数据集的零样本榜单直接比较。
+
+Core ML 适配于 **2026-10-14** 核对文档与实现；作者报告的数值对齐检查不代表任务准确率，也不证明全部计算都在 Neural Engine 执行。
 
 ## 决策应用示例
 
