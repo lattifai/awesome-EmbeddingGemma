@@ -9,13 +9,14 @@
 
 EmbeddingGemma2 maps text, code, images, video, and audio into a shared embedding space. This list covers resources supporting the **second generation** (distinct from EmbeddingGemma 300M and Gemini Embedding 2).
 
-Last checked: **2026-10-12**. Sources reviewed; runtimes not tested locally.
+Last checked: **2026-10-12**; new community entries checked **2026-10-13**. Sources reviewed; runtimes not tested locally.
 
 ## Contents
 
 - [Popular Applications](#popular-applications)
 - [Community Applications](#community-applications)
 - [Fine-tuning and Decision Models](#fine-tuning-and-decision-models)
+- [Decision Application Examples](#decision-application-examples)
 - [Start here](#start-here)
 - [Model at a glance](#model-at-a-glance)
 - [Guides and examples](#guides-and-examples)
@@ -34,7 +35,9 @@ Applications built with EmbeddingGemma2. Stars update via Shields.io and may be 
 
 ## Community Applications
 
+- [Local Search](https://github.com/btroussel/SemanticSearchMCP) - macOS local file search with MCP access for coding assistants; the app is not notarized, and snippets sent to cloud assistants leave the device.
 - [Recall](https://github.com/pdstn12/Recall) - Early-stage Linux file search with Rust, GTK 4, and llama.cpp.
+- [VectorDash](https://github.com/ampersandru/VectorDash) - Windows 11 local search across documents, images, audio, and video with page and timestamp jumps; uses llama.cpp and ships an unsigned installer.
 
 ## Fine-tuning and Decision Models
 
@@ -42,6 +45,10 @@ Applications built with EmbeddingGemma2. Stars update via Shields.io and may be 
 - [Typed Decisions](https://huggingface.co/datasets/LocalLLaMA/typed-decisions) - Training and evaluation data used by the model above, covering agent checks, support tickets, invoices, and security incidents; metrics measure agreement with teacher labels.
 
 The model author selected hyperparameters while inspecting the test split; its fine-tuned results are not directly comparable with the dataset's zero-shot leaderboard.
+
+## Decision Application Examples
+
+- [EmbeddingGemma2 Jeff](https://github.com/karimtn/embeddingGemma2-jeff) - Node.js examples for support intent classification, spam detection, and triage using Transformers.js and ONNX embeddings; matches labeled examples by cosine similarity without fine-tuning or a trained decision head.
 
 ## Start here
 
@@ -67,6 +74,7 @@ Sources: [model card](https://ai.google.dev/gemma/docs/embeddinggemma/model_card
 - [Text embeddings with Sentence Transformers](https://ai.google.dev/gemma/docs/embeddinggemma/inference-embeddinggemma-with-sentence-transformers) - Official text retrieval walkthrough.
 - [Multimodal embeddings with Sentence Transformers](https://ai.google.dev/gemma/docs/embeddinggemma/multimodal-embeddinggemma-with-sentence-transformers) - Media and mixed-input examples.
 - [Transformers model documentation](https://huggingface.co/docs/transformers/model_doc/embedding_gemma2) - Lower-level model and processor APIs.
+- [Minimal multimodal search](https://github.com/ranjankndev/embeddinggemma2-search) - A small Python example for local text, image, audio, and video retrieval using NumPy vectors, without a database or UI.
 
 The Sentence Transformers tutorials require **6.1.0+**.
 

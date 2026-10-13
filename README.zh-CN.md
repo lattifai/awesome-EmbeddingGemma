@@ -9,13 +9,14 @@
 
 EmbeddingGemma2 将文本、代码、图片、视频和音频映射到共享向量空间。本清单聚焦明确支持**第二代**的资源（区别于 EmbeddingGemma 300M 与 Gemini Embedding 2）。
 
-核查日期：**2026-10-12**。已核对来源，未本地实测。
+核查日期：**2026-10-12**；新增社区条目于 **2026-10-13** 核查。已核对来源，未本地实测。
 
 ## 目录
 
 - [热门应用](#热门应用)
 - [社区应用](#社区应用)
 - [微调与决策模型](#微调与决策模型)
+- [决策应用示例](#决策应用示例)
 - [从这里开始](#从这里开始)
 - [模型速览](#模型速览)
 - [教程与示例](#教程与示例)
@@ -34,7 +35,9 @@ EmbeddingGemma2 将文本、代码、图片、视频和音频映射到共享向�
 
 ## 社区应用
 
+- [Local Search](https://github.com/btroussel/SemanticSearchMCP) - macOS 本地文件搜索，通过 MCP 供编程助手检索；应用尚未公证，发送给云端助手的文件片段会离开设备。
 - [Recall](https://github.com/pdstn12/Recall) - Linux 本地多模态文件搜索，基于 Rust、GTK 4 和 llama.cpp；早期项目。
+- [VectorDash](https://github.com/ampersandru/VectorDash) - Windows 11 本地搜索文档、图片、音频和视频，支持跳转页码与时间点；基于 llama.cpp，安装包尚未签名。
 
 ## 微调与决策模型
 
@@ -42,6 +45,10 @@ EmbeddingGemma2 将文本、代码、图片、视频和音频映射到共享向�
 - [Typed Decisions](https://huggingface.co/datasets/LocalLLaMA/typed-decisions) - 上述模型的训练与评测数据，覆盖 Agent 检查、客服、发票和安全事件；指标衡量与教师标签的一致性。
 
 模型作者披露调参时查看过测试集；其微调结果不能与数据集的零样本榜单直接比较。
+
+## 决策应用示例
+
+- [EmbeddingGemma2 Jeff](https://github.com/karimtn/embeddingGemma2-jeff) - 基于 Transformers.js 与 ONNX 向量的 Node.js 示例，用于客服意图分类、垃圾信息识别和任务分流；通过余弦相似度匹配带标签的示例，无需微调，也没有训练决策头。
 
 ## 从这里开始
 
@@ -67,6 +74,7 @@ EmbeddingGemma2 将文本、代码、图片、视频和音频映射到共享向�
 - [Sentence Transformers 文本教程](https://ai.google.dev/gemma/docs/embeddinggemma/inference-embeddinggemma-with-sentence-transformers) - 官方 Python 文本检索指南。
 - [Sentence Transformers 多模态教程](https://ai.google.dev/gemma/docs/embeddinggemma/multimodal-embeddinggemma-with-sentence-transformers) - 媒体与混合输入官方示例。
 - [Transformers 模型文档](https://huggingface.co/docs/transformers/model_doc/embedding_gemma2) - 底层模型与处理器 API。
+- [最小多模态搜索示例](https://github.com/ranjankndev/embeddinggemma2-search) - 用少量 Python 文件和 NumPy 向量实现本地文本、图片、音频与视频检索，无需数据库或 UI。
 
 Sentence Transformers 教程要求 **6.1.0+**。
 
