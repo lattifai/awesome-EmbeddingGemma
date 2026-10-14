@@ -50,6 +50,10 @@ The model author selected hyperparameters while inspecting the test split; its f
 
 Core ML adaptation checked **2026-10-14** against its documentation and implementation; author-reported parity checks do not establish task accuracy or exclusive Neural Engine execution.
 
+- [Bharat-Embed 270M](https://huggingface.co/eulogik/bharat-embed-270m-gemma2) - Text-only LoRA fine-tune for Hindi and Hinglish retrieval, with [training and export code](https://github.com/eulogik/Bharat-Embed); trained at 256 tokens, with long-document behavior unmeasured.
+
+Bharat-Embed checked **2026-10-14** against its model card, configuration, and published files; author evaluations were not reproduced locally.
+
 ## Decision Application Examples
 
 - [EmbeddingGemma2 Jeff](https://github.com/karimtn/embeddingGemma2-jeff) - Node.js examples for support intent classification, spam detection, and triage using Transformers.js and ONNX embeddings; matches labeled examples by cosine similarity without fine-tuning or a trained decision head.

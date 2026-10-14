@@ -50,6 +50,10 @@ EmbeddingGemma2 将文本、代码、图片、视频和音频映射到共享向�
 
 Core ML 适配于 **2026-10-14** 核对文档与实现；作者报告的数值对齐检查不代表任务准确率，也不证明全部计算都在 Neural Engine 执行。
 
+- [Bharat-Embed 270M](https://huggingface.co/eulogik/bharat-embed-270m-gemma2) - 面向印地语和印英混合语检索的纯文本 LoRA 微调模型，提供[训练与导出代码](https://github.com/eulogik/Bharat-Embed)；按 256 token 训练，长文档效果尚未评测。
+
+Bharat-Embed 于 **2026-10-14** 核对模型卡、配置与已发布文件；未本地复现作者评测。
+
 ## 决策应用示例
 
 - [EmbeddingGemma2 Jeff](https://github.com/karimtn/embeddingGemma2-jeff) - 基于 Transformers.js 与 ONNX 向量的 Node.js 示例，用于客服意图分类、垃圾信息识别和任务分流；通过余弦相似度匹配带标签的示例，无需微调，也没有训练决策头。
