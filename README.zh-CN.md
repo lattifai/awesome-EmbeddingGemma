@@ -94,6 +94,9 @@ Sentence Transformers 教程要求 **6.1.0+**。
 | [LiteRT 完整模型 740M](https://huggingface.co/litert-community/embeddinggemma-2-740m-litert-lm)                | LiteRT-LM                            | 完整多模态文件与部署说明。                                                                 |
 | [MLX Community 合集](https://huggingface.co/collections/mlx-community/embeddinggemma-2)                      | Apple silicon                        | 转换版本合集；运行时与模态支持须查阅各模型卡。                                                       |
 | [FluidInference Core ML](https://huggingface.co/FluidInference/embeddinggemma-2-coreml)                    | Apple Neural Engine / GPU            | 文本走 Neural Engine，图片/音频走 GPU；macOS 15 / iOS 18 起，文本最多 512 token，音频按 10 秒窗口处理。 |
+| [Påmin INT8 ONNX](https://huggingface.co/pamin-labs/embeddinggemma-2-text-int8-onnx)                       | ONNX Runtime CPU                     | 仅文本；示例截断至 512 token，最长实测输入为 471 token；维护索引时须固定运行时版本。                          |
+
+Påmin 转换版于 **2026-10-14** 核对模型卡与已发布文件；限制及数值检查来自作者，未本地复现。
 
 
 ## 推理框架与服务
