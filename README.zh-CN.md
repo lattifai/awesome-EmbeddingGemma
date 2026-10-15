@@ -32,6 +32,7 @@ EmbeddingGemma2 将文本、代码、图片、视频和音频映射到共享向�
 | 项目                                                                            | Stars                                                                  | 用途与支持依据                                                                                                               |
 | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | [DigUp](https://github.com/ARahim3/DigUp)                                     | ![Stars](https://img.shields.io/github/stars/ARahim3/DigUp?style=flat) | [本地多模态文件搜索；Apple silicon macOS 14+，另有 Windows/Linux 测试版](https://github.com/ARahim3/DigUp).                                          |
+| [Google AI Edge Gallery](https://github.com/google-ai-edge/gallery) | ![Stars](https://img.shields.io/github/stars/google-ai-edge/gallery?style=flat) | [端侧图片搜索与视频片段定位；Android 12+ / iOS 17+，实验性测试版](https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/). |
 
 DigUp [v0.7.0-beta.1](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.1) 新增 Windows 10/11 x64 与 Linux x64 安装包；Windows 安装包未签名。这两个测试版尚无截图文字 OCR，并跳过旧版 Word .doc、RAW 和 SVG 文件。
 
@@ -53,6 +54,7 @@ DigUp [v0.7.0-beta.1](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.
 Core ML 适配于 **2026-10-14** 核对文档与实现；作者报告的数值对齐检查不代表任务准确率，也不证明全部计算都在 Neural Engine 执行。
 
 - [Bharat-Embed 270M](https://huggingface.co/eulogik/bharat-embed-270m-gemma2) - 面向印地语和印英混合语检索的纯文本 LoRA 微调模型，提供[训练与导出代码](https://github.com/eulogik/Bharat-Embed)；按 256 token 训练，长文档效果尚未评测。
+- [EmbeddingGemma2 Korean](https://huggingface.co/jonpark0/embeddinggemma-2-ko) - 面向韩语检索的微调模型，与基础权重混合并保留多模态输入；需要 Sentence Transformers 6.1+、Transformers 5.18+，作者报告韩语文本到语音检索效果小幅下降。
 
 Bharat-Embed 于 **2026-10-14** 核对模型卡、配置与已发布文件；未本地复现作者评测。
 
@@ -85,7 +87,7 @@ Bharat-Embed 于 **2026-10-14** 核对模型卡、配置与已发布文件；未
 - [Sentence Transformers 多模态教程](https://ai.google.dev/gemma/docs/embeddinggemma/multimodal-embeddinggemma-with-sentence-transformers) - 媒体与混合输入官方示例。
 - [Transformers 模型文档](https://huggingface.co/docs/transformers/model_doc/embedding_gemma2) - 底层模型与处理器 API。
 - [最小多模态搜索示例](https://github.com/ranjankndev/embeddinggemma2-search) - 用少量 Python 文件和 NumPy 向量实现本地文本、图片、音频与视频检索，无需数据库或 UI。
-- [UI Search](https://github.com/sai-prakash/ui-screenshot-search) - 基于 Transformers.js 的浏览器示例，用文字或截图检索 UI 组件；当前只有 19 个示例组件，截图检索尚无准确率评测。
+- [UI Search](https://github.com/sai-prakash/ui-screenshot-search) - 在浏览器中用文字或截图搜索示例组件、IBM Carbon 和 GitHub Primer，提供可复用的 Storybook 索引脚本；截图检索准确率尚未评测。
 
 Sentence Transformers 教程要求 **6.1.0+**。
 

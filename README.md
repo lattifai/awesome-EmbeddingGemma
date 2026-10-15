@@ -29,9 +29,10 @@ Last checked: **2026-10-12**; new and updated community entries checked **2026-1
 
 Applications built with EmbeddingGemma2. Stars update via Shields.io and may be cached.
 
-| Project                                                                       | Stars                                                                  | Use and support evidence                                                                                                                     |
-| ----------------------------------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| [DigUp](https://github.com/ARahim3/DigUp)                                     | ![Stars](https://img.shields.io/github/stars/ARahim3/DigUp?style=flat) | [Local multimodal file search; Apple silicon macOS 14+, plus Windows/Linux beta](https://github.com/ARahim3/DigUp).                          |
+| Project                                                                       | Stars                                                                           | Use and support evidence                                                                                                                                                |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [DigUp](https://github.com/ARahim3/DigUp)                                     | ![Stars](https://img.shields.io/github/stars/ARahim3/DigUp?style=flat)          | [Local multimodal file search; Apple silicon macOS 14+, plus Windows/Linux beta](https://github.com/ARahim3/DigUp).                                                     |
+| [Google AI Edge Gallery](https://github.com/google-ai-edge/gallery)           | ![Stars](https://img.shields.io/github/stars/google-ai-edge/gallery?style=flat) | [On-device photo search and video moment retrieval; Android 12+ / iOS 17+, experimental beta](https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/). |
 
 DigUp [v0.7.0-beta.1](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.1) adds Windows 10/11 x64 and Linux x64 packages; Windows installer is unsigned. These beta ports lack screenshot OCR and skip legacy Word .doc, RAW, and SVG files.
 
@@ -53,6 +54,7 @@ The model author selected hyperparameters while inspecting the test split; its f
 Core ML adaptation checked **2026-10-14** against its documentation and implementation; author-reported parity checks do not establish task accuracy or exclusive Neural Engine execution.
 
 - [Bharat-Embed 270M](https://huggingface.co/eulogik/bharat-embed-270m-gemma2) - Text-only LoRA fine-tune for Hindi and Hinglish retrieval, with [training and export code](https://github.com/eulogik/Bharat-Embed); trained at 256 tokens, with long-document behavior unmeasured.
+- [EmbeddingGemma2 Korean](https://huggingface.co/jonpark0/embeddinggemma-2-ko) - Korean retrieval fine-tune blended with base weights, retaining multimodal inputs; requires Sentence Transformers 6.1+ and Transformers 5.18+, with a small Korean text-to-speech retrieval decline reported by the author.
 
 Bharat-Embed checked **2026-10-14** against its model card, configuration, and published files; author evaluations were not reproduced locally.
 
@@ -85,7 +87,7 @@ Sources: [model card](https://ai.google.dev/gemma/docs/embeddinggemma/model_card
 - [Multimodal embeddings with Sentence Transformers](https://ai.google.dev/gemma/docs/embeddinggemma/multimodal-embeddinggemma-with-sentence-transformers) - Media and mixed-input examples.
 - [Transformers model documentation](https://huggingface.co/docs/transformers/model_doc/embedding_gemma2) - Lower-level model and processor APIs.
 - [Minimal multimodal search](https://github.com/ranjankndev/embeddinggemma2-search) - A small Python example for local text, image, audio, and video retrieval using NumPy vectors, without a database or UI.
-- [UI Search](https://github.com/sai-prakash/ui-screenshot-search) - Browser demo using Transformers.js to find UI components by text or screenshot; limited to 19 sample components, with no screenshot retrieval accuracy evaluation yet.
+- [UI Search](https://github.com/sai-prakash/ui-screenshot-search) - Browser text/screenshot search across sample components, IBM Carbon, and GitHub Primer, with a reusable Storybook indexer; screenshot retrieval accuracy remains unmeasured.
 
 The Sentence Transformers tutorials require **6.1.0+**.
 
