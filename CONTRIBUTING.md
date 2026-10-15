@@ -11,8 +11,8 @@
 ## Submission checklist
 
 1. Add the entry to both `README.md` and `README.zh-CN.md`.
-2. Include direct evidence of second-generation support and the date checked.
-3. State whether verification is documentation-only or includes runtime environment, version, commands, and results.
+2. Link direct evidence of second-generation support in the entry; include the date checked in the submission context.
+3. In the submission context, state whether verification is documentation-only or includes runtime environment, version, commands, and results. Keep verification logs out of README descriptions; retain material limitations and attribute reported performance claims.
 4. Ensure consistent formatting and relative links across language editions.
 5. For corrections or removals, provide replacement sources or context (broken links alone do not prove abandonment).
 

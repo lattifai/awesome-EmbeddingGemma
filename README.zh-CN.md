@@ -33,7 +33,7 @@ EmbeddingGemma2 将文本、代码、图片、视频和音频映射到共享向�
 | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | [DigUp](https://github.com/ARahim3/DigUp)                                     | ![Stars](https://img.shields.io/github/stars/ARahim3/DigUp?style=flat) | [本地多模态文件搜索；Apple silicon macOS 14+，另有 Windows/Linux 测试版](https://github.com/ARahim3/DigUp).                                          |
 
-DigUp [v0.7.0-beta.1](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.1) 新增 Windows 10/11 x64 与 Linux x64 安装包；Windows 安装包未签名。这两个测试版尚无截图文字 OCR，并跳过旧版 Word .doc、RAW 和 SVG 文件。于 **2026-10-15** 核对发布说明与安装包列表，未本地运行。
+DigUp [v0.7.0-beta.1](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.1) 新增 Windows 10/11 x64 与 Linux x64 安装包；Windows 安装包未签名。这两个测试版尚无截图文字 OCR，并跳过旧版 Word .doc、RAW 和 SVG 文件。
 
 ## 社区应用
 

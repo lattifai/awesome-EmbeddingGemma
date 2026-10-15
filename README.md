@@ -33,7 +33,7 @@ Applications built with EmbeddingGemma2. Stars update via Shields.io and may be 
 | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | [DigUp](https://github.com/ARahim3/DigUp)                                     | ![Stars](https://img.shields.io/github/stars/ARahim3/DigUp?style=flat) | [Local multimodal file search; Apple silicon macOS 14+, plus Windows/Linux beta](https://github.com/ARahim3/DigUp).                          |
 
-DigUp [v0.7.0-beta.1](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.1) adds Windows 10/11 x64 and Linux x64 packages; Windows installer is unsigned. These beta ports lack screenshot OCR and skip legacy Word .doc, RAW, and SVG files. Release notes and assets checked **2026-10-15**; not run locally.
+DigUp [v0.7.0-beta.1](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.1) adds Windows 10/11 x64 and Linux x64 packages; Windows installer is unsigned. These beta ports lack screenshot OCR and skip legacy Word .doc, RAW, and SVG files.
 
 ## Community Applications
 
