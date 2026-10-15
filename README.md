@@ -131,6 +131,7 @@ Confirmed second-generation support. Stars update via Shields.io and may be cach
 vLLM support checked **2026-10-14** against the merged PR and model implementation; no local runtime test.
 
 - [embeddinggemma.c](https://github.com/QuixiAI/embeddinggemma.c) - Native embedding server supporting EmbeddingGemma2 on CPU, Metal, and [CUDA](https://github.com/QuixiAI/embeddinggemma.c/commit/6f4c2e713ed1d71519334ce159c57f5e592f76e1) (text, image, audio, sampled video, mixed inputs); v2 ROCm/XPU support is pending, and 300M benchmarks describe the first generation.
+- [eg2npu](https://github.com/daaku/eg2npu) - OpenVINO text embedding server for Intel NPU using EmbeddingGemma2 GGUF weights and a llama-server-compatible API; no image/audio inputs, and the packaged system service is limited to 64-token queries.
 
 ## Practical notes
 

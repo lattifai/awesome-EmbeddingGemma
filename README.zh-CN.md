@@ -131,6 +131,7 @@ EverPaper 转换版于 **2026-10-15** 核对模型卡与已发布文件；未本
 vLLM 支持于 **2026-10-14** 核对已合并 PR 与模型实现；未本地运行验证。
 
 - [embeddinggemma.c](https://github.com/QuixiAI/embeddinggemma.c) - 原生嵌入服务，第二代支持 CPU、Metal 与 [CUDA](https://github.com/QuixiAI/embeddinggemma.c/commit/6f4c2e713ed1d71519334ce159c57f5e592f76e1)（文本、图片、音频、视频采样帧及混合输入）；第二代 ROCm/XPU 支持仍待实现，300M 评测反映第一代。
+- [eg2npu](https://github.com/daaku/eg2npu) - 基于 OpenVINO 的 Intel NPU 文本向量服务，读取 EmbeddingGemma2 GGUF 权重并提供兼容 llama-server 的 API；不支持图片或音频，打包的系统服务仅支持最多 64 token 的查询。
 
 ## 使用要点
 
