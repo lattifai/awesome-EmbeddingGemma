@@ -55,6 +55,8 @@ Core ML 适配于 **2026-10-14** 核对文档与实现；作者报告的数值�
 
 - [Bharat-Embed 270M](https://huggingface.co/eulogik/bharat-embed-270m-gemma2) - 面向印地语和印英混合语检索的纯文本 LoRA 微调模型，提供[训练与导出代码](https://github.com/eulogik/Bharat-Embed)；按 256 token 训练，长文档效果尚未评测。
 - [EmbeddingGemma2 Korean](https://huggingface.co/jonpark0/embeddinggemma-2-ko) - 面向韩语检索的微调模型，与基础权重混合并保留多模态输入；需要 Sentence Transformers 6.1+、Transformers 5.18+，作者报告韩语文本到语音检索效果小幅下降。
+- [norsk-asr](https://github.com/ahdrage/norsk-asr) - 基于 EmbeddingGemma2 音频编码器和 CTC 读取器的挪威语 Bokmål 识别模型，提供[权重](https://huggingface.co/ahdrage/norsk-asr)；仅录音转写，输出小写且无标点，可选 KenLM 文件采用 CC BY-SA 4.0。
+- [African speech-retrieval LoRA](https://huggingface.co/naijaml/embeddinggemma-2-african-speech-lora) - 在六种非洲语言上训练的同语种语音与文本检索适配器；需要基础模型，不提供转写或翻译。
 
 Bharat-Embed 于 **2026-10-14** 核对模型卡、配置与已发布文件；未本地复现作者评测。
 
@@ -100,6 +102,7 @@ Sentence Transformers 教程要求 **6.1.0+**。
 | [LiteRT 纯文本 270M](https://huggingface.co/litert-community/embeddinggemma-2-text-270m-litert-lm)            | LiteRT-LM                            | 纯文本模型文件。                                                                      |
 | [LiteRT 文本 + 视觉 440M](https://huggingface.co/litert-community/embeddinggemma-2-text-vision-440m-litert-lm) | LiteRT-LM                            | 视觉模型文件；输入范围见模型卡。                                                              |
 | [LiteRT 完整模型 740M](https://huggingface.co/litert-community/embeddinggemma-2-740m-litert-lm)                | LiteRT-LM                            | 完整多模态文件与部署说明。                                                                 |
+| [LiteRT 文本 + 音频，570M](https://huggingface.co/Luigi/embeddinggemma-2-570m-text-audio-litert-lm) | LiteRT-LM | 移除视觉编码器的社区重打包版本，仅支持文本与音频，附构建配置。 |
 | [MLX Community 合集](https://huggingface.co/collections/mlx-community/embeddinggemma-2)                      | Apple silicon                        | 转换版本合集；运行时与模态支持须查阅各模型卡。                                                       |
 | [FluidInference Core ML](https://huggingface.co/FluidInference/embeddinggemma-2-coreml)                    | Apple Neural Engine / GPU            | 文本走 Neural Engine，图片/音频走 GPU；macOS 15 / iOS 18 起，文本最多 512 token，音频按 10 秒窗口处理。 |
 | [Påmin INT8 ONNX](https://huggingface.co/pamin-labs/embeddinggemma-2-text-int8-onnx)                       | ONNX Runtime CPU                     | 仅文本；示例截断至 512 token，最长实测输入为 471 token；维护索引时须固定运行时版本。                          |
