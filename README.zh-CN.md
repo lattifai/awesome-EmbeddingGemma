@@ -39,7 +39,9 @@ DigUp [v0.7.0-beta.1](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.
 ## 社区应用
 
 - [Daemon](https://github.com/iamartyaa/daemon) - macOS 14+ Apple silicon 应用，用快捷键保存选中文字、截图、文件和语音笔记，再按语义找回；基于本地 llama.cpp，发布包尚未公证。
+- [drive-lens](https://github.com/xcspl/drive-lens) - 用本地 EmbeddingGemma2 向量搜索 Google Drive 共享照片、视频预览和 PDF，提供 Windows/macOS/Linux 桌面端；文件夹须设为持链接可访问，描述生成另需视觉大模型，使用云端模型时会发送预览图给服务商。
 - [Local Search](https://github.com/btroussel/SemanticSearchMCP) - macOS 本地文件搜索，通过 MCP 供编程助手检索；应用尚未公证，发送给云端助手的文件片段会离开设备。
+- [MediaIndex](https://github.com/harsheetamorey/mediaindex) - macOS 13+ Apple silicon 应用，用 EmbeddingGemma2 本地搜索图片、音频和视频，另用其他模型做物体计数与图片编辑；应用未签名，编辑功能需额外下载模型。
 - [Recall](https://github.com/pdstn12/Recall) - Linux 本地多模态文件搜索，基于 Rust、GTK 4 和 llama.cpp；早期项目。
 - [VectorDash](https://github.com/ampersandru/VectorDash) - Windows 11 本地搜索文档、图片、音频和视频，支持跳转页码与时间点；基于 llama.cpp，安装包尚未签名。
 - [Vault Semantic Search](https://github.com/TheBrainAir/vault-semantic-search) - Obsidian 桌面端本地笔记混合搜索、相关笔记与图片搜索插件，使用 WebGPU 或本地 Ollama 服务；尚无安装包，需从源码构建。

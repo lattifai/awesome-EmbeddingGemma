@@ -39,7 +39,9 @@ DigUp [v0.7.0-beta.1](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.
 ## Community Applications
 
 - [Daemon](https://github.com/iamartyaa/daemon) - macOS 14+ Apple silicon app for capturing selected text, screenshots, files, and voice notes with a hotkey and recalling them by meaning; uses local llama.cpp, with unnotarized releases.
+- [drive-lens](https://github.com/xcspl/drive-lens) - Search shared Google Drive photos, video previews, and PDFs with local EmbeddingGemma2 vectors and a Windows/macOS/Linux desktop app; requires an anyone-with-the-link folder and a separate vision LLM for descriptions, with previews sent to the provider when hosted.
 - [Local Search](https://github.com/btroussel/SemanticSearchMCP) - macOS local file search with MCP access for coding assistants; the app is not notarized, and snippets sent to cloud assistants leave the device.
+- [MediaIndex](https://github.com/harsheetamorey/mediaindex) - macOS 13+ Apple silicon app for local image, audio, and video search with EmbeddingGemma2, plus object counting and photo editing via separate models; unsigned app, with extra model downloads for editing.
 - [Recall](https://github.com/pdstn12/Recall) - Early-stage Linux file search with Rust, GTK 4, and llama.cpp.
 - [VectorDash](https://github.com/ampersandru/VectorDash) - Windows 11 local search across documents, images, audio, and video with page and timestamp jumps; uses llama.cpp and ships an unsigned installer.
 - [Vault Semantic Search](https://github.com/TheBrainAir/vault-semantic-search) - Desktop Obsidian plugin for local hybrid note search, related notes, and image search using WebGPU or a local Ollama server; source build required, with no release package yet.
