@@ -94,6 +94,7 @@ Sources: [model card](https://ai.google.dev/gemma/docs/embeddinggemma/model_card
 - [Multimodal embeddings with Sentence Transformers](https://ai.google.dev/gemma/docs/embeddinggemma/multimodal-embeddinggemma-with-sentence-transformers) - Media and mixed-input examples.
 - [Transformers model documentation](https://huggingface.co/docs/transformers/model_doc/embedding_gemma2) - Lower-level model and processor APIs.
 - [Minimal multimodal search](https://github.com/ranjankndev/embeddinggemma2-search) - A small Python example for local text, image, audio, and video retrieval using NumPy vectors, without a database or UI.
+- [Gemma-Lens](https://github.com/johnrobinsn/gemma-lens) - Text, microphone, and image-query demo over COCO images and ESC-50 audio using direct cosine search, with a [step-by-step article](https://www.storminthecastle.com/posts/gemma_lens/); runs on CPU or CUDA, and ESC-50 audio is non-commercial.
 - [UI Search](https://github.com/sai-prakash/ui-screenshot-search) - Browser text/screenshot search across sample components, IBM Carbon, and GitHub Primer, with a reusable Storybook indexer; screenshot retrieval accuracy remains unmeasured.
 
 The Sentence Transformers tutorials require **6.1.0+**.

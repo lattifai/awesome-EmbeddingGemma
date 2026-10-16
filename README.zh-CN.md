@@ -94,6 +94,7 @@ Bharat-Embed 于 **2026-10-14** 核对模型卡、配置与已发布文件；未
 - [Sentence Transformers 多模态教程](https://ai.google.dev/gemma/docs/embeddinggemma/multimodal-embeddinggemma-with-sentence-transformers) - 媒体与混合输入官方示例。
 - [Transformers 模型文档](https://huggingface.co/docs/transformers/model_doc/embedding_gemma2) - 底层模型与处理器 API。
 - [最小多模态搜索示例](https://github.com/ranjankndev/embeddinggemma2-search) - 用少量 Python 文件和 NumPy 向量实现本地文本、图片、音频与视频检索，无需数据库或 UI。
+- [Gemma-Lens](https://github.com/johnrobinsn/gemma-lens) - 用文字、麦克风录音或图片检索 COCO 图片与 ESC-50 音频的示例，直接计算余弦相似度，附[实现教程](https://www.storminthecastle.com/posts/gemma_lens/)；支持 CPU 或 CUDA，ESC-50 音频限非商业使用。
 - [UI Search](https://github.com/sai-prakash/ui-screenshot-search) - 在浏览器中用文字或截图搜索示例组件、IBM Carbon 和 GitHub Primer，提供可复用的 Storybook 索引脚本；截图检索准确率尚未评测。
 
 Sentence Transformers 教程要求 **6.1.0+**。
