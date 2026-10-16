@@ -60,6 +60,7 @@ Core ML 适配于 **2026-10-14** 核对文档与实现；作者报告的数值�
 - [Bharat-Embed 270M](https://huggingface.co/eulogik/bharat-embed-270m-gemma2) - 面向印地语和印英混合语检索的纯文本 LoRA 微调模型，提供[训练与导出代码](https://github.com/eulogik/Bharat-Embed)；按 256 token 训练，长文档效果尚未评测。
 - [EmbeddingGemma2 Korean](https://huggingface.co/jonpark0/embeddinggemma-2-ko) - 面向韩语检索的微调模型，与基础权重混合并保留多模态输入；需要 Sentence Transformers 6.1+、Transformers 5.18+，作者报告韩语文本到语音检索效果小幅下降。
 - [Embed2ASR](https://github.com/tc3oliver/embed2asr) - 冻结 EmbeddingGemma2 音频编码器，训练 9.66M 参数的 GRU-CTC 读取器，用于普通话、英语与中英混合转写，提供[读取器权重](https://huggingface.co/tc3oliver/Embed2ASR-v1)；需另行下载基础编码器，仅支持离线转写，不支持流式。
+- [KolStream](https://huggingface.co/MaorB/embeddinggemma-2-asr-hebrew-english-streaming) - 基于部分微调的 EmbeddingGemma2 音频编码器、流式读取器与 Transducer 头，支持希伯来语和英语的文件及流式转写；提供权重与推理代码，需另下载基础编码器，输出不带标点或大写。
 - [norsk-asr](https://github.com/ahdrage/norsk-asr) - 基于 EmbeddingGemma2 音频编码器和 CTC 读取器的挪威语 Bokmål 识别模型，提供[权重](https://huggingface.co/ahdrage/norsk-asr)；仅录音转写，输出小写且无标点，可选 KenLM 文件采用 CC BY-SA 4.0。
 - [African speech-retrieval LoRA](https://huggingface.co/naijaml/embeddinggemma-2-african-speech-lora) - 在六种非洲语言上训练的同语种语音与文本检索适配器；需要基础模型，不提供转写或翻译。
 
@@ -92,6 +93,7 @@ Bharat-Embed 于 **2026-10-14** 核对模型卡、配置与已发布文件；未
 
 - [Sentence Transformers 文本教程](https://ai.google.dev/gemma/docs/embeddinggemma/inference-embeddinggemma-with-sentence-transformers) - 官方 Python 文本检索指南。
 - [Sentence Transformers 多模态教程](https://ai.google.dev/gemma/docs/embeddinggemma/multimodal-embeddinggemma-with-sentence-transformers) - 媒体与混合输入官方示例。
+- [官方多模态微调教程](https://ai.google.dev/gemma/docs/embeddinggemma/fine-tuning-multimodal-embeddinggemma-with-sentence-transformers) - 用跨模态三元组与 Sentence Transformers 训练文本到图片检索，包含训练前后评估；需要支持 BF16 的 GPU。
 - [Transformers 模型文档](https://huggingface.co/docs/transformers/model_doc/embedding_gemma2) - 底层模型与处理器 API。
 - [最小多模态搜索示例](https://github.com/ranjankndev/embeddinggemma2-search) - 用少量 Python 文件和 NumPy 向量实现本地文本、图片、音频与视频检索，无需数据库或 UI。
 - [Gemma-Lens](https://github.com/johnrobinsn/gemma-lens) - 用文字、麦克风录音或图片检索 COCO 图片与 ESC-50 音频的示例，直接计算余弦相似度，附[实现教程](https://www.storminthecastle.com/posts/gemma_lens/)；支持 CPU 或 CUDA，ESC-50 音频限非商业使用。
