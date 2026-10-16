@@ -38,6 +38,7 @@ DigUp [v0.7.0-beta.1](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.
 
 ## Community Applications
 
+- [Daemon](https://github.com/iamartyaa/daemon) - macOS 14+ Apple silicon app for capturing selected text, screenshots, files, and voice notes with a hotkey and recalling them by meaning; uses local llama.cpp, with unnotarized releases.
 - [Local Search](https://github.com/btroussel/SemanticSearchMCP) - macOS local file search with MCP access for coding assistants; the app is not notarized, and snippets sent to cloud assistants leave the device.
 - [Recall](https://github.com/pdstn12/Recall) - Early-stage Linux file search with Rust, GTK 4, and llama.cpp.
 - [VectorDash](https://github.com/ampersandru/VectorDash) - Windows 11 local search across documents, images, audio, and video with page and timestamp jumps; uses llama.cpp and ships an unsigned installer.
@@ -56,6 +57,7 @@ Core ML adaptation checked **2026-10-14** against its documentation and implemen
 
 - [Bharat-Embed 270M](https://huggingface.co/eulogik/bharat-embed-270m-gemma2) - Text-only LoRA fine-tune for Hindi and Hinglish retrieval, with [training and export code](https://github.com/eulogik/Bharat-Embed); trained at 256 tokens, with long-document behavior unmeasured.
 - [EmbeddingGemma2 Korean](https://huggingface.co/jonpark0/embeddinggemma-2-ko) - Korean retrieval fine-tune blended with base weights, retaining multimodal inputs; requires Sentence Transformers 6.1+ and Transformers 5.18+, with a small Korean text-to-speech retrieval decline reported by the author.
+- [Embed2ASR](https://github.com/tc3oliver/embed2asr) - Mandarin, English, and code-switching transcription using a frozen EmbeddingGemma2 audio encoder and a 9.66M-parameter GRU-CTC reader, with [reader weights](https://huggingface.co/tc3oliver/Embed2ASR-v1); requires the base encoder separately and supports offline transcription only, not streaming.
 - [norsk-asr](https://github.com/ahdrage/norsk-asr) - Norwegian Bokmål speech recognition using the EmbeddingGemma2 audio encoder and a CTC reader, with [weights](https://huggingface.co/ahdrage/norsk-asr); recordings only, lowercase unpunctuated output, optional KenLM files under CC BY-SA 4.0.
 - [African speech-retrieval LoRA](https://huggingface.co/naijaml/embeddinggemma-2-african-speech-lora) - Adapter trained on six African languages for same-language speech/text retrieval; requires the base model and does not transcribe or translate.
 

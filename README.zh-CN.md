@@ -38,6 +38,7 @@ DigUp [v0.7.0-beta.1](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.
 
 ## 社区应用
 
+- [Daemon](https://github.com/iamartyaa/daemon) - macOS 14+ Apple silicon 应用，用快捷键保存选中文字、截图、文件和语音笔记，再按语义找回；基于本地 llama.cpp，发布包尚未公证。
 - [Local Search](https://github.com/btroussel/SemanticSearchMCP) - macOS 本地文件搜索，通过 MCP 供编程助手检索；应用尚未公证，发送给云端助手的文件片段会离开设备。
 - [Recall](https://github.com/pdstn12/Recall) - Linux 本地多模态文件搜索，基于 Rust、GTK 4 和 llama.cpp；早期项目。
 - [VectorDash](https://github.com/ampersandru/VectorDash) - Windows 11 本地搜索文档、图片、音频和视频，支持跳转页码与时间点；基于 llama.cpp，安装包尚未签名。
@@ -56,6 +57,7 @@ Core ML 适配于 **2026-10-14** 核对文档与实现；作者报告的数值�
 
 - [Bharat-Embed 270M](https://huggingface.co/eulogik/bharat-embed-270m-gemma2) - 面向印地语和印英混合语检索的纯文本 LoRA 微调模型，提供[训练与导出代码](https://github.com/eulogik/Bharat-Embed)；按 256 token 训练，长文档效果尚未评测。
 - [EmbeddingGemma2 Korean](https://huggingface.co/jonpark0/embeddinggemma-2-ko) - 面向韩语检索的微调模型，与基础权重混合并保留多模态输入；需要 Sentence Transformers 6.1+、Transformers 5.18+，作者报告韩语文本到语音检索效果小幅下降。
+- [Embed2ASR](https://github.com/tc3oliver/embed2asr) - 冻结 EmbeddingGemma2 音频编码器，训练 9.66M 参数的 GRU-CTC 读取器，用于普通话、英语与中英混合转写，提供[读取器权重](https://huggingface.co/tc3oliver/Embed2ASR-v1)；需另行下载基础编码器，仅支持离线转写，不支持流式。
 - [norsk-asr](https://github.com/ahdrage/norsk-asr) - 基于 EmbeddingGemma2 音频编码器和 CTC 读取器的挪威语 Bokmål 识别模型，提供[权重](https://huggingface.co/ahdrage/norsk-asr)；仅录音转写，输出小写且无标点，可选 KenLM 文件采用 CC BY-SA 4.0。
 - [African speech-retrieval LoRA](https://huggingface.co/naijaml/embeddinggemma-2-african-speech-lora) - 在六种非洲语言上训练的同语种语音与文本检索适配器；需要基础模型，不提供转写或翻译。
 
