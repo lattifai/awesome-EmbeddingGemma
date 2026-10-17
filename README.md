@@ -34,7 +34,7 @@ Applications built with EmbeddingGemma2. Stars update via Shields.io and may be 
 | [DigUp](https://github.com/ARahim3/DigUp)                                     | ![Stars](https://img.shields.io/github/stars/ARahim3/DigUp?style=flat)          | [Local multimodal file search; Apple silicon macOS 14+, plus Windows/Linux beta](https://github.com/ARahim3/DigUp).                                                     |
 | [Google AI Edge Gallery](https://github.com/google-ai-edge/gallery)           | ![Stars](https://img.shields.io/github/stars/google-ai-edge/gallery?style=flat) | [On-device photo search and video moment retrieval; Android 12+ / iOS 17+, experimental beta](https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/). |
 
-DigUp [v0.7.0-beta.1](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.1) adds Windows 10/11 x64 and Linux x64 packages; Windows installer is unsigned. These beta ports lack screenshot OCR and skip legacy Word .doc, RAW, and SVG files.
+DigUp [v0.7.0-beta.1](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.1) adds Windows 10/11 x64 and Linux x64 packages; Windows installer is unsigned. These beta ports lack screenshot OCR and skip legacy Word .doc, RAW, and SVG files. Community install and troubleshooting guides (unofficial, not affiliated with DigUp): [digup.run](https://digup.run).
 
 ## Community Applications
 
