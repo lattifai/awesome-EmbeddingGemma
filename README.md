@@ -114,10 +114,8 @@ The Sentence Transformers tutorials require **6.1.0+**.
 | [LiteRT text + audio, 570M](https://huggingface.co/Luigi/embeddinggemma-2-570m-text-audio-litert-lm)              | LiteRT-LM                            | Community repack of the full model without the vision encoder; text/audio only, with a build manifest.                                   |
 | [MLX Community collection](https://huggingface.co/collections/mlx-community/embeddinggemma-2)                     | Apple silicon                        | Conversion collection; inspect model cards for runtime/modality support.                                                                 |
 | [FluidInference Core ML](https://huggingface.co/FluidInference/embeddinggemma-2-coreml)                           | Apple Neural Engine / GPU            | Text on Neural Engine, image/audio on GPU; macOS 15 / iOS 18+, text limited to 512 tokens and audio to 10-second windows.                |
-| [Påmin INT8 ONNX](https://huggingface.co/pamin-labs/embeddinggemma-2-text-int8-onnx)                              | ONNX Runtime CPU                     | Text only; example truncates at 512 tokens, longest tested input is 471 tokens; pin the runtime version when maintaining an index.       |
 | [EverPaper Core AI](https://huggingface.co/EverPaper/embeddinggemma-2-coreai)                                     | macOS 27+ / Apple silicon            | Text, image, and audio conversion with Swift/Python runners; Neural Engine/GPU routes, 2,048-token text cap and 30-second audio windows. |
 
-Påmin conversion checked **2026-10-14** against its model card and published files; limits and numerical checks are author-reported, not locally reproduced.
 
 EverPaper conversion checked **2026-10-15** against its model card and published assets; runtime and author-reported numerical checks were not reproduced locally.
 
