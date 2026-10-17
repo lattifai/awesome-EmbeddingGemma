@@ -115,6 +115,7 @@ The Sentence Transformers tutorials require **6.1.0+**.
 | [MLX Community collection](https://huggingface.co/collections/mlx-community/embeddinggemma-2)                     | Apple silicon                        | Conversion collection; inspect model cards for runtime/modality support.                                                                 |
 | [FluidInference Core ML](https://huggingface.co/FluidInference/embeddinggemma-2-coreml)                           | Apple Neural Engine / GPU            | Text on Neural Engine, image/audio on GPU; macOS 15 / iOS 18+, text limited to 512 tokens and audio to 10-second windows.                |
 | [EverPaper Core AI](https://huggingface.co/EverPaper/embeddinggemma-2-coreai)                                     | macOS 27+ / Apple silicon            | Text, image, and audio conversion with Swift/Python runners; Neural Engine/GPU routes, 2,048-token text cap and 30-second audio windows. |
+| [TurinTech GGUF](https://huggingface.co/turintech/embeddinggemma-2-Artemis-GGUF)                                  | llama.cpp / Ollama                   | Text-only GGUF conversions with llama.cpp and Ollama CPU embedding instructions.                                                         |
 
 
 EverPaper conversion checked **2026-10-15** against its model card and published assets; runtime and author-reported numerical checks were not reproduced locally.
