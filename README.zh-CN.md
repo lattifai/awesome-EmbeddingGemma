@@ -43,7 +43,7 @@ DigUp [v0.7.0-beta.1](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.
 - [Local Search](https://github.com/btroussel/SemanticSearchMCP) - macOS 本地文件搜索，通过 MCP 供编程助手检索；应用尚未公证，发送给云端助手的文件片段会离开设备。
 - [MediaIndex](https://github.com/harsheetamorey/mediaindex) - macOS 13+ Apple silicon 应用，用 EmbeddingGemma2 本地搜索图片、音频和视频，另用其他模型做物体计数与图片编辑；应用未签名，编辑功能需额外下载模型。
 - [Recall](https://github.com/pdstn12/Recall) - Linux 本地多模态文件搜索，基于 Rust、GTK 4 和 llama.cpp；早期项目。
-- [VectorDash](https://github.com/ampersandru/VectorDash) - Windows 11 本地搜索文档、图片、音频和视频，支持跳转页码与时间点；基于 llama.cpp，安装包尚未签名。
+- [VectorDash](https://github.com/ampersandru/VectorDash) - Windows 本地文档、图片、音频和视频搜索，支持跳转到页码与时间点；使用 llama.cpp，安装包未签名。[0.3.25 版](https://github.com/ampersandru/VectorDash/releases/tag/v0.3.25) 新增 Windows 10 x64 2004+ 兼容（测试版，Windows 11 仍为主要测试平台）和可选 RAW 图片支持（测试版，默认关闭，仅用于 Full 来源）。
 - [Vault Semantic Search](https://github.com/TheBrainAir/vault-semantic-search) - Obsidian 桌面端本地笔记混合搜索、相关笔记与图片搜索插件，使用 WebGPU 或本地 Ollama 服务；尚无安装包，需从源码构建。
 
 ## 微调与决策模型

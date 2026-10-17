@@ -43,7 +43,7 @@ DigUp [v0.7.0-beta.1](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.
 - [Local Search](https://github.com/btroussel/SemanticSearchMCP) - macOS local file search with MCP access for coding assistants; the app is not notarized, and snippets sent to cloud assistants leave the device.
 - [MediaIndex](https://github.com/harsheetamorey/mediaindex) - macOS 13+ Apple silicon app for local image, audio, and video search with EmbeddingGemma2, plus object counting and photo editing via separate models; unsigned app, with extra model downloads for editing.
 - [Recall](https://github.com/pdstn12/Recall) - Early-stage Linux file search with Rust, GTK 4, and llama.cpp.
-- [VectorDash](https://github.com/ampersandru/VectorDash) - Windows 11 local search across documents, images, audio, and video with page and timestamp jumps; uses llama.cpp and ships an unsigned installer.
+- [VectorDash](https://github.com/ampersandru/VectorDash) - Windows local search across documents, images, audio, and video with page and timestamp jumps; uses llama.cpp and ships an unsigned installer. [Version 0.3.25](https://github.com/ampersandru/VectorDash/releases/tag/v0.3.25) adds Windows 10 x64 2004+ compatibility (beta; Windows 11 remains the primary tested platform) and optional RAW image support (beta, disabled by default, Full sources only).
 - [Vault Semantic Search](https://github.com/TheBrainAir/vault-semantic-search) - Desktop Obsidian plugin for local hybrid note search, related notes, and image search using WebGPU or a local Ollama server; source build required, with no release package yet.
 
 ## Fine-tuning and Decision Models
