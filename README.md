@@ -143,6 +143,8 @@ vLLM support checked **2026-10-14** against the merged PR and model implementati
 
 - [openclip-gemma](https://github.com/kotadymo/openclip-gemma) - Unofficial Python library for EmbeddingGemma2 image/text encoding and optional video-frame search on CPU or CUDA through Sentence Transformers; offers an OpenCLIP-inspired API, not a drop-in replacement, and requires Python 3.12–3.14 excluding 3.14.1.
 
+- [ComfyUI-EmbeddingGemma2](https://github.com/hiroki-abe-58/ComfyUI-EmbeddingGemma2) - Unofficial ComfyUI nodes for text, image, video, and audio similarity and image ranking; requires the V3 node API and separate model download, uses only the first 30 seconds of audio and at most 32 video frames, and may conflict with nodes requiring huggingface-hub 2.x.
+
 ## Practical notes
 
 - Use task-specific prefixes from the [model card](https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2); query and document prefixes differ.

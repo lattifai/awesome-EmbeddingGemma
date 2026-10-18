@@ -143,6 +143,8 @@ vLLM 支持于 **2026-10-14** 核对已合并 PR 与模型实现；未本地运�
 
 - [openclip-gemma](https://github.com/kotadymo/openclip-gemma) - 非官方 Python 库，通过 Sentence Transformers 在 CPU 或 CUDA 上提供 EmbeddingGemma2 图片、文本编码及可选视频帧搜索；接口借鉴 OpenCLIP，但不能直接替换它，需要 Python 3.12–3.14（不含 3.14.1）。
 
+- [ComfyUI-EmbeddingGemma2](https://github.com/hiroki-abe-58/ComfyUI-EmbeddingGemma2) - 非官方 ComfyUI 节点包，用于文本、图片、视频和音频相似度比较及图片排序；需要 V3 节点 API 和单独下载模型，音频仅取前 30 秒、视频最多取 32 帧，依赖可能与要求 huggingface-hub 2.x 的节点冲突。
+
 ## 使用要点
 
 - 按[模型卡](https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2)使用任务前缀，检索查询和文档前缀不同。
