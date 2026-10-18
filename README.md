@@ -141,6 +141,8 @@ vLLM support checked **2026-10-14** against the merged PR and model implementati
 - [embeddinggemma.c](https://github.com/QuixiAI/embeddinggemma.c) - Native embedding server supporting EmbeddingGemma2 on CPU, Metal, and [CUDA](https://github.com/QuixiAI/embeddinggemma.c/commit/6f4c2e713ed1d71519334ce159c57f5e592f76e1) (text, image, audio, sampled video, mixed inputs); v2 ROCm/XPU support is pending, and 300M benchmarks describe the first generation.
 - [eg2npu](https://github.com/daaku/eg2npu) - OpenVINO text embedding server for Intel NPU using EmbeddingGemma2 GGUF weights and a llama-server-compatible API; no image/audio inputs, and the packaged system service is limited to 64-token queries.
 
+- [openclip-gemma](https://github.com/kotadymo/openclip-gemma) - Unofficial Python library for EmbeddingGemma2 image/text encoding and optional video-frame search on CPU or CUDA through Sentence Transformers; offers an OpenCLIP-inspired API, not a drop-in replacement, and requires Python 3.12–3.14 excluding 3.14.1.
+
 ## Practical notes
 
 - Use task-specific prefixes from the [model card](https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2); query and document prefixes differ.
