@@ -34,7 +34,7 @@ EmbeddingGemma2 将文本、代码、图片、视频和音频映射到共享向�
 | [DigUp](https://github.com/ARahim3/DigUp)                                     | ![Stars](https://img.shields.io/github/stars/ARahim3/DigUp?style=flat) | [本地多模态文件搜索；Apple silicon macOS 14+，另有 Windows/Linux 测试版](https://github.com/ARahim3/DigUp).                                          |
 | [Google AI Edge Gallery](https://github.com/google-ai-edge/gallery) | ![Stars](https://img.shields.io/github/stars/google-ai-edge/gallery?style=flat) | [端侧图片搜索与视频片段定位；Android 12+ / iOS 17+，实验性测试版](https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/). |
 
-DigUp [v0.7.0-beta.1](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.1) 新增 Windows 10/11 x64 与 Linux x64 安装包；Windows 安装包未签名。这两个测试版尚无截图文字 OCR，并跳过旧版 Word .doc、RAW 和 SVG 文件。
+DigUp [v0.7.0-beta.2](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.2) 面向 Windows 10/11 x64 与 Linux x64，修复索引与下载失败，新增 CPU 推理开关，并包含代码搜索和文件解析安全修复；Windows 安装包仍未签名。这两个测试版尚无截图文字 OCR，并跳过旧版 Word .doc、RAW 和 SVG 文件。Mac 仍为 0.6.1，代码搜索修复计划在下一版提供。
 
 ## 社区应用
 
