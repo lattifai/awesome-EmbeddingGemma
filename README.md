@@ -144,9 +144,11 @@ vLLM support checked **2026-10-14** against the merged PR and model implementati
 - [embeddinggemma.c](https://github.com/QuixiAI/embeddinggemma.c) - Native embedding server supporting EmbeddingGemma2 on CPU, Metal, and [CUDA](https://github.com/QuixiAI/embeddinggemma.c/commit/6f4c2e713ed1d71519334ce159c57f5e592f76e1) (text, image, audio, sampled video, mixed inputs); v2 ROCm/XPU support is pending, and 300M benchmarks describe the first generation.
 - [eg2npu](https://github.com/daaku/eg2npu) - OpenVINO text embedding server for Intel NPU using EmbeddingGemma2 GGUF weights and a llama-server-compatible API; no image/audio inputs, and the packaged system service is limited to 64-token queries.
 
-- [openclip-gemma](https://github.com/kotadymo/openclip-gemma) - Unofficial Python library for EmbeddingGemma2 image/text encoding and optional video-frame search on CPU or CUDA through Sentence Transformers; offers an OpenCLIP-inspired API, not a drop-in replacement, and requires Python 3.12–3.14 excluding 3.14.1.
+- [openclip-gemma](https://github.com/kotadymo/openclip-gemma) - Unofficial Python library for EmbeddingGemma2 image/text encoding and optional video-frame search on CPU or CUDA through Transformers; offers an OpenCLIP-inspired API, not a drop-in replacement, and requires Python 3.12–3.14 excluding 3.14.1.
 
 - [ComfyUI-EmbeddingGemma2](https://github.com/hiroki-abe-58/ComfyUI-EmbeddingGemma2) - Unofficial ComfyUI nodes for text, image, video, and audio similarity and image ranking; requires the V3 node API and separate model download, uses only the first 30 seconds of audio and at most 32 video frames, and may conflict with nodes requiring huggingface-hub 2.x.
+
+- [embeddinggemma2-rust](https://github.com/Dalailalama/embeddinggemma2-rust) - Unofficial Rust text, image, audio, and video embeddings on CPU or CUDA, with CLI and OpenAI-compatible HTTP serving; requires separate weights, CUDA 13.x libraries for GPU use, WAV audio inputs, and FFmpeg for MP4 decoding.
 
 ## Practical notes
 

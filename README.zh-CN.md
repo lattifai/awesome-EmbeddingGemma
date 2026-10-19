@@ -144,9 +144,11 @@ vLLM 支持于 **2026-10-14** 核对已合并 PR 与模型实现；未本地运�
 - [embeddinggemma.c](https://github.com/QuixiAI/embeddinggemma.c) - 原生嵌入服务，第二代支持 CPU、Metal 与 [CUDA](https://github.com/QuixiAI/embeddinggemma.c/commit/6f4c2e713ed1d71519334ce159c57f5e592f76e1)（文本、图片、音频、视频采样帧及混合输入）；第二代 ROCm/XPU 支持仍待实现，300M 评测反映第一代。
 - [eg2npu](https://github.com/daaku/eg2npu) - 基于 OpenVINO 的 Intel NPU 文本向量服务，读取 EmbeddingGemma2 GGUF 权重并提供兼容 llama-server 的 API；不支持图片或音频，打包的系统服务仅支持最多 64 token 的查询。
 
-- [openclip-gemma](https://github.com/kotadymo/openclip-gemma) - 非官方 Python 库，通过 Sentence Transformers 在 CPU 或 CUDA 上提供 EmbeddingGemma2 图片、文本编码及可选视频帧搜索；接口借鉴 OpenCLIP，但不能直接替换它，需要 Python 3.12–3.14（不含 3.14.1）。
+- [openclip-gemma](https://github.com/kotadymo/openclip-gemma) - 非官方 Python 库，通过 Transformers 在 CPU 或 CUDA 上提供 EmbeddingGemma2 图片、文本编码及可选视频帧搜索；接口借鉴 OpenCLIP，但不能直接替换它，需要 Python 3.12–3.14（不含 3.14.1）。
 
 - [ComfyUI-EmbeddingGemma2](https://github.com/hiroki-abe-58/ComfyUI-EmbeddingGemma2) - 非官方 ComfyUI 节点包，用于文本、图片、视频和音频相似度比较及图片排序；需要 V3 节点 API 和单独下载模型，音频仅取前 30 秒、视频最多取 32 帧，依赖可能与要求 huggingface-hub 2.x 的节点冲突。
+
+- [embeddinggemma2-rust](https://github.com/Dalailalama/embeddinggemma2-rust) - 非官方 Rust 文本、图片、音频和视频向量实现，支持 CPU 或 CUDA，提供 CLI 与兼容 OpenAI 的 HTTP 服务；需另下载权重，GPU 运行需 CUDA 13.x 库，音频文件输入限 WAV，MP4 解码需 FFmpeg。
 
 ## 使用要点
 
