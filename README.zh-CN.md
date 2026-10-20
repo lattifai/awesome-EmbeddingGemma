@@ -41,6 +41,7 @@ DigUp [v0.7.0-beta.2](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.
 
 - [Daemon](https://github.com/iamartyaa/daemon) - macOS 14+ Apple silicon 应用，用快捷键保存选中文字、截图、文件和语音笔记，再按语义找回；基于本地 llama.cpp，发布包尚未公证。
 - [drive-lens](https://github.com/xcspl/drive-lens) - 用本地 EmbeddingGemma2 向量搜索 Google Drive 共享照片、视频预览和 PDF，提供 Windows/macOS/Linux 桌面端；文件夹须设为持链接可访问，描述生成另需视觉大模型，使用云端模型时会发送预览图给服务商。
+- [GemSearch](https://github.com/IndigoJay/GemSearch) - Linux 本地照片与截图搜索，支持文字、图片及图片加文字的组合查询，提供 CLI 和浏览器界面；默认使用 NVIDIA CUDA，也可选 CPU，离线使用前需先下载模型。
 - [Local Search](https://github.com/btroussel/SemanticSearchMCP) - macOS 本地文件搜索，通过 MCP 供编程助手检索；应用尚未公证，发送给云端助手的文件片段会离开设备。
 - [MediaIndex](https://github.com/harsheetamorey/mediaindex) - macOS 13+ Apple silicon 应用，用 EmbeddingGemma2 本地搜索图片、音频和视频，另用其他模型做物体计数与图片编辑；应用未签名，编辑功能需额外下载模型。
 - [omafind](https://github.com/radimsem/omafind) - Omarchy 4 本地文档、PDF、图片、视频和音频搜索插件，基于 EmbeddingGemma2 与 llama-server，支持跳转到页码和时间点；安装时构建引擎并下载模型，索引与缩略图在本机未加密保存。
