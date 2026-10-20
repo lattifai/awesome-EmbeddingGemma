@@ -70,6 +70,7 @@ Core ML 适配于 **2026-10-14** 核对文档与实现；作者报告的数值�
 - [KolStream](https://huggingface.co/MaorB/embeddinggemma-2-asr-hebrew-english-streaming) - 基于部分微调的 EmbeddingGemma2 音频编码器、流式读取器与 Transducer 头，支持希伯来语和英语的文件及流式转写；提供权重与推理代码，需另下载基础编码器，输出不带标点或大写。
 - [norsk-asr](https://github.com/ahdrage/norsk-asr) - 基于 EmbeddingGemma2 音频编码器和 CTC 读取器的挪威语 Bokmål 识别模型，提供[权重](https://huggingface.co/ahdrage/norsk-asr)；仅录音转写，输出小写且无标点，可选 KenLM 文件采用 CC BY-SA 4.0。
 - [sea-asr](https://github.com/PixelML/sea-asr) - 基于 EmbeddingGemma2 的 CTC 语音识别，提供[印尼语](https://huggingface.co/PixelML/sea-asr-id)和 [Tagalog／Taglish](https://huggingface.co/PixelML/sea-asr-ph) 权重、词级时间戳及 SRT/VTT 字幕导出，支持 CPU 或 CUDA；需另下载基础编码器，输出小写文本且无标点。
+- [Turkish STT](https://huggingface.co/mstkyvz/embeddinggemma2-turkish-stt) - 基于 EmbeddingGemma2、字符级 CTC 读取器、可拆卸 LoRA 和可选 KenLM 的土耳其语转写，提供 CC BY-SA 4.0 权重与语言模型，以及 Apache-2.0 训练代码；需基础模型，不支持流式，输出小写且无标点，使用原始向量能力时须关闭 LoRA。
 - [African speech-retrieval LoRA](https://huggingface.co/naijaml/embeddinggemma-2-african-speech-lora) - 在六种非洲语言上训练的同语种语音与文本检索适配器；需要基础模型，不提供转写或翻译。
 
 Bharat-Embed 于 **2026-10-14** 核对模型卡、配置与已发布文件；未本地复现作者评测。
