@@ -39,6 +39,7 @@ DigUp [v0.7.0-beta.2](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.
 
 ## 社区应用
 
+- [Code Déjà Vu](https://github.com/shashankbudem/code-dejavu) - 本地跨仓库查找函数，并通过 Git pre-commit hook 提醒相似实现，不阻止提交；支持 TypeScript、JavaScript、Python 和 Rust 中至少五行的函数，跳过测试文件，需要 Python 3.10+ 并下载模型。
 - [Daemon](https://github.com/iamartyaa/daemon) - macOS 14+ Apple silicon 应用，用快捷键保存选中文字、截图、文件和语音笔记，再按语义找回；基于本地 llama.cpp，发布包尚未公证。
 - [drive-lens](https://github.com/xcspl/drive-lens) - 用本地 EmbeddingGemma2 向量搜索 Google Drive 共享照片、视频预览和 PDF，提供 Windows/macOS/Linux 桌面端；文件夹须设为持链接可访问，描述生成另需视觉大模型，使用云端模型时会发送预览图给服务商。
 - [GemSearch](https://github.com/IndigoJay/GemSearch) - Linux 本地照片与截图搜索，支持文字、图片及图片加文字的组合查询，提供 CLI 和浏览器界面；默认使用 NVIDIA CUDA，也可选 CPU，离线使用前需先下载模型。

@@ -39,6 +39,7 @@ DigUp [v0.7.0-beta.2](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.
 
 ## Community Applications
 
+- [Code Déjà Vu](https://github.com/shashankbudem/code-dejavu) - Local cross-repository function search and similarity warnings through a non-blocking Git pre-commit hook; supports TypeScript, JavaScript, Python, and Rust functions of at least five lines, skips tests, and requires Python 3.10+ plus a model download.
 - [Daemon](https://github.com/iamartyaa/daemon) - macOS 14+ Apple silicon app for capturing selected text, screenshots, files, and voice notes with a hotkey and recalling them by meaning; uses local llama.cpp, with unnotarized releases.
 - [drive-lens](https://github.com/xcspl/drive-lens) - Search shared Google Drive photos, video previews, and PDFs with local EmbeddingGemma2 vectors and a Windows/macOS/Linux desktop app; requires an anyone-with-the-link folder and a separate vision LLM for descriptions, with previews sent to the provider when hosted.
 - [GemSearch](https://github.com/IndigoJay/GemSearch) - Local photo and screenshot search for Linux with text, image, or combined image-and-text queries, a CLI, and a browser UI; defaults to NVIDIA CUDA with a CPU option, and needs an initial model download before offline use.
