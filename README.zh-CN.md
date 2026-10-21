@@ -155,6 +155,8 @@ vLLM 支持于 **2026-10-14** 核对已合并 PR 与模型实现；未本地运�
 
 - [embeddinggemma2-rust](https://github.com/Dalailalama/embeddinggemma2-rust) - 非官方 Rust 文本、图片、音频和视频向量实现，支持 CPU 或 CUDA，提供 CLI 与兼容 OpenAI 的 HTTP 服务；需另下载权重，GPU 运行需 CUDA 13.x 库，音频文件输入限 WAV，MP4 解码需 FFmpeg。
 
+- [EmbeddingGemma2 for Unity](https://github.com/ayutaz/unity-embeddinggemma-2) - 通过 Unity 6000.3.21f1 和 Sentis 2.6.1 GPUCompute 提供文本、图片与音频向量；仅支持 Windows Editor/Player，模型另行下载，媒体输入尺寸或长度固定，无自动 CPU 回退；首版支持配置为 64 GB RAM、16 GB VRAM。
+
 ## 使用要点
 
 - 按[模型卡](https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2)使用任务前缀，检索查询和文档前缀不同。
