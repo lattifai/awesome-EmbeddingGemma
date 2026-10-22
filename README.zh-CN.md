@@ -51,6 +51,7 @@ DigUp [v0.7.0-beta.3](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.
 - [Recall](https://github.com/pdstn12/Recall) - Linux 本地多模态文件搜索，基于 Rust、GTK 4 和 llama.cpp；早期项目。
 - [rummage](https://github.com/av/rummage) - 基于 llama.cpp 的本地多模态文件搜索，提供 CLI、网页、HTTP API 及页码和时间点跳转，支持 CPU、CUDA、ROCm 或 Vulkan；Linux 安装包要求 glibc 2.39+ 和 x86-64-v3，模型另行下载，视频需 FFmpeg，PDF 页面图像需 Poppler。
 - [Sonicproof](https://github.com/kanaworksai-hue/sonicproof) - 本地检查生成音频与提示词的匹配程度、筛选多个生成结果及搜索音效库，提供 CLI、网页和 MCP，支持 CPU、CUDA 或 Apple silicon；相似度评分仍需试听确认，短促声音尤其容易混淆。
+- [Trawl](https://github.com/Crane-AI-Labs/trawl) - 在 Android 11+、64 位手机上通过 EmbeddingGemma2 本地搜索照片、文档、视频和语音笔记；模型需另下载，搜索以英语效果为优先，转写使用独立的英语语音识别模型。32 位 Go 版不提供语义搜索。
 - [VectorDash](https://github.com/ampersandru/VectorDash) - Windows 本地文档、图片、音频和视频搜索，支持跳转到页码与时间点；使用 llama.cpp，安装包未签名。[0.3.41 版](https://github.com/ampersandru/VectorDash/releases/tag/v0.3.41) 新增可选的剪贴板图片语义搜索和截图文字 OCR；Windows 10 x64 2004+ 兼容仍为测试版（Windows 11 仍为主要测试平台）；RAW 图片支持仍为可选测试功能，默认关闭，仅用于 Full 来源。
 - [Vault Semantic Search](https://github.com/TheBrainAir/vault-semantic-search) - Obsidian 桌面端本地笔记混合搜索、相关笔记与图片搜索插件，使用 WebGPU 或本地 Ollama 服务；尚无安装包，需从源码构建。
 
