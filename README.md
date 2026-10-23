@@ -55,6 +55,8 @@ DigUp [v0.7.0-beta.3](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.
 - [VectorDash](https://github.com/ampersandru/VectorDash) - Windows local document, image, audio, and video search with page and timestamp jumps via llama.cpp; unsigned installer. [Version 0.3.42](https://github.com/ampersandru/VectorDash/releases/tag/v0.3.42) adds beta reverse image search across indexed files and retained clipboard images, requiring compatible visual vectors (not Quick-only or OCR-only entries), plus optional AI Local Search. Remote image queries send the image to the configured embedding server; AI Local Search sends retrieved snippets to the configured AI server. Windows 10 x64 2004+ and optional RAW support (disabled by default, Full sources only) remain beta; Windows 11 is the primary tested platform.
 - [Vault Semantic Search](https://github.com/TheBrainAir/vault-semantic-search) - Desktop Obsidian plugin for local hybrid note search, related notes, and image search using WebGPU or a local Ollama server; source build required, with no release package yet.
 
+- [video-grep](https://github.com/madhusoodhans/video-grep) - Terminal and SSH video search with EmbeddingGemma2, returning timestamps and clip-export commands; requires Python 3.10+, FFmpeg, and an initial model download. Searches six-second visual clips only, without audio or OCR; author testing covers macOS and English queries, with Linux and CUDA untested.
+
 ## Fine-tuning and Decision Models
 
 - [EG2 Typed Decision](https://huggingface.co/mrm8488/embeddinggemma-2-ft-typed-decision) - EmbeddingGemma2 text encoder with a roughly 0.5M-parameter head for `choice`, `noul` (Boolean), and `score` decisions with probabilities; includes weights, inference code, and further fine-tuning examples.

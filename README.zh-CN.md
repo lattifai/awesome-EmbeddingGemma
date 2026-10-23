@@ -55,6 +55,8 @@ DigUp [v0.7.0-beta.3](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.
 - [VectorDash](https://github.com/ampersandru/VectorDash) - Windows 本地文档、图片、音频和视频搜索，通过 llama.cpp 支持页码与时间点跳转；安装包未签名。[0.3.42 版](https://github.com/ampersandru/VectorDash/releases/tag/v0.3.42) 新增测试版以图搜图，覆盖已索引文件和保留的剪贴板图片，需要兼容的视觉向量（不含仅 Quick 或仅 OCR 条目），并提供可选的 AI 本地检索。远端图片查询会发送图片给配置的向量服务器，AI 本地检索会发送检索片段给配置的 AI 服务器。Windows 10 x64 2004+ 与可选 RAW 支持（默认关闭，仅用于 Full 来源）仍为测试版，Windows 11 为主要测试平台。
 - [Vault Semantic Search](https://github.com/TheBrainAir/vault-semantic-search) - Obsidian 桌面端本地笔记混合搜索、相关笔记与图片搜索插件，使用 WebGPU 或本地 Ollama 服务；尚无安装包，需从源码构建。
 
+- [video-grep](https://github.com/madhusoodhans/video-grep) - 在终端或 SSH 会话中用 EmbeddingGemma2 搜索视频，返回时间点与片段导出命令；需要 Python 3.10+、FFmpeg 并首次下载模型。仅搜索六秒片段的视觉内容，不搜索音频或 OCR 文字；作者测试覆盖 macOS 与英语查询，Linux 和 CUDA 尚未测试。
+
 ## 微调与决策模型
 
 - [EG2 Typed Decision](https://huggingface.co/mrm8488/embeddinggemma-2-ft-typed-decision) - 基于 EmbeddingGemma2 文本编码器和约 0.5M 参数决策头，输出 `choice`、`noul`（布尔）与 `score` 及概率；提供权重、推理代码和继续微调示例。
