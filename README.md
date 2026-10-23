@@ -66,6 +66,8 @@ The model author selected hyperparameters while inspecting the test split; its f
 
 Core ML adaptation checked **2026-10-14** against its documentation and implementation; author-reported parity checks do not establish task accuracy or exclusive Neural Engine execution.
 
+- [Multimodal Typed Decision](https://huggingface.co/Danny-Dasilva/embeddinggemma-2-multimodal-typed-decision) - EmbeddingGemma2 fine-tune for text, image, and video choice, Boolean, and ordinal decisions, with optional object-box localisation; requires the bundled runtime and is primarily English. Evaluation sets were reused during development, and some training data is non-commercial, research-only, or lacks a stated license.
+
 - [Bharat-Embed 270M](https://huggingface.co/eulogik/bharat-embed-270m-gemma2) - Text-only LoRA fine-tune for Hindi and Hinglish retrieval, with [training and export code](https://github.com/eulogik/Bharat-Embed); trained at 256 tokens, with long-document behavior unmeasured.
 - [EmbeddingGemma2 Korean](https://huggingface.co/jonpark0/embeddinggemma-2-ko) - Korean retrieval fine-tune blended with base weights, retaining multimodal inputs; requires Sentence Transformers 6.1+ and Transformers 5.18+, with a small Korean text-to-speech retrieval decline reported by the author.
 - [eg2-transcribe](https://github.com/john-rocky/eg2-transcribe) - English speech transcription with a frozen EmbeddingGemma2 audio encoder and trained reader, targeting Android 8+ arm64 via LiteRT and iOS/macOS 27 via Core AI; requires building the app and downloading models separately, is trained on read English speech, and outputs no punctuation or capitalization.
