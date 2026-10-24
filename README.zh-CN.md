@@ -161,6 +161,8 @@ vLLM 支持于 **2026-10-14** 核对已合并 PR 与模型实现；未本地运�
 
 - [ComfyUI-EmbeddingGemma2](https://github.com/hiroki-abe-58/ComfyUI-EmbeddingGemma2) - 非官方 ComfyUI 节点包，用于文本、图片、视频和音频相似度比较及图片排序；需要 V3 节点 API 和单独下载模型，音频仅取前 30 秒、视频最多取 32 帧，依赖可能与要求 huggingface-hub 2.x 的节点冲突。
 
+- [embeddinggemma2-rocm](https://github.com/anjn/embeddinggemma2-rocm) - 通过 HIP、MIGraphX 和 LibTorch 在 Linux AMD GPU 上生成 EmbeddingGemma2 图片与文本向量，提供 C/C++、Python 和 HTTP 接口；需要可用的 ROCm 驱动，并单独准备与 GPU、软件环境匹配的模型包。作者测试覆盖 Radeon 890M（gfx1150），其他 GPU 需自行编译与验证。
+
 - [embeddinggemma2-rust](https://github.com/Dalailalama/embeddinggemma2-rust) - 非官方 Rust 文本、图片、音频和视频向量实现，支持 CPU 或 CUDA，提供 CLI 与兼容 OpenAI 的 HTTP 服务；需另下载权重，GPU 运行需 CUDA 13.x 库，音频文件输入限 WAV，MP4 解码需 FFmpeg。
 
 - [Rust Embedding Runtime](https://github.com/A-K-6/rust-embedding-runtime) - 自托管的纯 CPU EmbeddingGemma2 文本向量服务，提供兼容 OpenAI 的 API 及内置模型的 Linux AMD64/ARM64 Docker 镜像；每条输入限 1,024 token，任务前缀需自行添加，ARM64 需支持 NEON/FP16 指令。

@@ -161,6 +161,8 @@ vLLM support checked **2026-10-14** against the merged PR and model implementati
 
 - [ComfyUI-EmbeddingGemma2](https://github.com/hiroki-abe-58/ComfyUI-EmbeddingGemma2) - Unofficial ComfyUI nodes for text, image, video, and audio similarity and image ranking; requires the V3 node API and separate model download, uses only the first 30 seconds of audio and at most 32 video frames, and may conflict with nodes requiring huggingface-hub 2.x.
 
+- [embeddinggemma2-rocm](https://github.com/anjn/embeddinggemma2-rocm) - EmbeddingGemma2 image and text embeddings on Linux AMD GPUs via HIP, MIGraphX, and LibTorch, with C/C++, Python, and HTTP interfaces; requires a working ROCm driver and separately prepared model bundles specific to the GPU/software environment. Author testing covers Radeon 890M (gfx1150); other GPUs need compilation and validation.
+
 - [embeddinggemma2-rust](https://github.com/Dalailalama/embeddinggemma2-rust) - Unofficial Rust text, image, audio, and video embeddings on CPU or CUDA, with CLI and OpenAI-compatible HTTP serving; requires separate weights, CUDA 13.x libraries for GPU use, WAV audio inputs, and FFmpeg for MP4 decoding.
 
 - [Rust Embedding Runtime](https://github.com/A-K-6/rust-embedding-runtime) - Self-hosted CPU-only EmbeddingGemma2 text server with an OpenAI-compatible API and model-bundled Linux AMD64/ARM64 Docker images; limited to 1,024 tokens per input, requires explicit task prefixes, and needs NEON/FP16 instructions on ARM64.
