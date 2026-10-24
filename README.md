@@ -161,6 +161,8 @@ vLLM support checked **2026-10-14** against the merged PR and model implementati
 
 - [embeddinggemma2-rust](https://github.com/Dalailalama/embeddinggemma2-rust) - Unofficial Rust text, image, audio, and video embeddings on CPU or CUDA, with CLI and OpenAI-compatible HTTP serving; requires separate weights, CUDA 13.x libraries for GPU use, WAV audio inputs, and FFmpeg for MP4 decoding.
 
+- [Rust Embedding Runtime](https://github.com/A-K-6/rust-embedding-runtime) - Self-hosted CPU-only EmbeddingGemma2 text server with an OpenAI-compatible API and model-bundled Linux AMD64/ARM64 Docker images; limited to 1,024 tokens per input, requires explicit task prefixes, and needs NEON/FP16 instructions on ARM64.
+
 - [EmbeddingGemma2 for Unity](https://github.com/ayutaz/unity-embeddinggemma-2) - Text, image, and audio embeddings via Unity 6000.3.21f1 and Sentis 2.6.1 GPUCompute; Windows Editor/Player only, separate model downloads, fixed media inputs, and no automatic CPU fallback; initial supported configuration uses 64 GB RAM and 16 GB VRAM.
 
 ## Practical notes
