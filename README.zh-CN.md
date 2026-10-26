@@ -132,6 +132,7 @@ Sentence Transformers 教程要求 **6.1.0+**。
 | [MLX Community 合集](https://huggingface.co/collections/mlx-community/embeddinggemma-2)                      | Apple silicon                        | 转换版本合集；运行时与模态支持须查阅各模型卡。                                                       |
 | [FluidInference Core ML](https://huggingface.co/FluidInference/embeddinggemma-2-coreml)                    | Apple Neural Engine / GPU            | 文本走 Neural Engine，图片/音频走 GPU；macOS 15 / iOS 18 起，文本最多 512 token，音频按 10 秒窗口处理。 |
 | [EverPaper Core AI](https://huggingface.co/EverPaper/embeddinggemma-2-coreai) | macOS 27+ / Apple silicon | 文本、图片和音频转换版，提供 Swift/Python 接口；支持 Neural Engine/GPU 路线，文本上限 2,048 token，音频按 30 秒窗口处理。 |
+| [TurinTech GGUF](https://huggingface.co/turintech/embeddinggemma-2-Artemis-GGUF) | llama.cpp / Ollama | 纯文本 GGUF 转换版本，提供 llama.cpp 和 Ollama CPU 嵌入接口的使用说明。 |
 
 - [CowboyCoder Core AI ANE](https://huggingface.co/cowboycoderhq/EmbeddingGemma-2-FP16-M6-ANE) - macOS 27+ / Apple silicon: 纯文本 FP16 转换版，提供 [Python 运行时与转换代码](https://github.com/cowboycoderhq/EmbeddingGemma-2-16GB-M6-ANE)；面向 Neural Engine，词元查表在主机侧完成，使用固定的 128/512 token 输入形状，超出 512 token 会截断。作者测试设备为 16 GB M6 Mac mini。
 
