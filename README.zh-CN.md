@@ -43,6 +43,7 @@ DigUp [v0.7.0-beta.3](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.
 - [Daemon](https://github.com/iamartyaa/daemon) - macOS 14+ Apple silicon 应用，用快捷键保存选中文字、截图、文件和语音笔记，再按语义找回；基于本地 llama.cpp，发布包尚未公证。
 - [drive-lens](https://github.com/xcspl/drive-lens) - 用本地 EmbeddingGemma2 向量搜索 Google Drive 共享照片、视频预览和 PDF，提供 Windows/macOS/Linux 桌面端；文件夹须设为持链接可访问，描述生成另需视觉大模型，使用云端模型时会发送预览图给服务商。
 - [GemSearch](https://github.com/IndigoJay/GemSearch) - Linux 本地照片与截图搜索，支持文字、图片及图片加文字的组合查询，提供 CLI 和浏览器界面；默认使用 NVIDIA CUDA，也可选 CPU，离线使用前需先下载模型。
+- [Git Séance](https://github.com/shashankbudem/git-seance) - 用自然语言和本地 EmbeddingGemma2 从 Git 历史中找已删除的函数，查看或导出其最后版本；支持至少五行的 TypeScript、JavaScript、Python 和 Rust 函数，跳过测试文件。需要 Python 3.10+ 并下载模型；每次索引会替换旧索引，需一次列出所有待检索仓库。
 - [Local Search](https://github.com/btroussel/SemanticSearchMCP) - macOS 本地文件搜索，通过 MCP 供编程助手检索；应用尚未公证，发送给云端助手的文件片段会离开设备。
 - [MediaIndex](https://github.com/harsheetamorey/mediaindex) - macOS 13+ Apple silicon 应用，用 EmbeddingGemma2 本地搜索图片、音频和视频，另用其他模型做物体计数与图片编辑；应用未签名，编辑功能需额外下载模型。
 - [Mitsuke](https://github.com/kanaworksai-hue/mitsuke) - 在 Apple silicon Mac 上通过 MLX 本地搜索图片和视频镜头，支持文字、示例图片及组合查询，覆盖 RAW、PSD、EXR/HDR 素材库，提供网页、CLI 和 MCP；首次使用需下载模型。
