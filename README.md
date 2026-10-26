@@ -161,7 +161,7 @@ vLLM support checked **2026-10-14** against the merged PR and model implementati
 
 - [Ferro](https://github.com/paragontasx/ferro) - C++ EmbeddingGemma2 text, image, audio, and video embeddings targeting Intel N100-class Linux devices via OpenCL iGPU, with CPU fallback; requires a source build, OpenCL headers/runtime, separate GGUF weights and media projector, and FFmpeg for video. Long sequences fall back to CPU, and large images can be slow.
 
-- [GemmaEmbed](https://github.com/maralski/gemma-embed-swift) - Swift package with its own Metal kernels for in-process EmbeddingGemma2 text, image, and mixed text/image embeddings; requires Apple silicon macOS 14+, Swift 6, and separate Q8_0 GGUF weights (plus the projector for images), with no audio support.
+- [GemmaEmbed](https://github.com/maralski/gemma-embed-swift) - Swift package with its own Metal kernels for in-process EmbeddingGemma2 text, image, audio, and mixed-input embeddings; requires Apple silicon macOS 14+, Swift 6, and separate Q8_0 GGUF weights plus the projector for images/audio. Audio clips exceeding the token budget are rejected rather than truncated (about 5 minutes 27 seconds at the default budget).
 
 - [OpenVLCLIP](https://github.com/kotadymo/openvlclip) - Unofficial Python library for EmbeddingGemma2 image/text encoding and optional video-frame search on CPU or CUDA through Transformers; offers an OpenCLIP-inspired API, not a drop-in replacement, and requires Python 3.12–3.14 excluding 3.14.1. Formerly openclip-gemma; the [migration guide](https://github.com/kotadymo/openvlclip/blob/main/docs/migration-v0.5.0.md) requires changing the package and imports, with no old import alias.
 

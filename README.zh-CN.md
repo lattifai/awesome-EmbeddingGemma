@@ -161,7 +161,7 @@ vLLM 支持于 **2026-10-14** 核对已合并 PR 与模型实现；未本地运�
 
 - [Ferro](https://github.com/paragontasx/ferro) - 面向 Intel N100 类 Linux 设备的 C++ 推理引擎，通过 OpenCL 核显生成 EmbeddingGemma2 文本、图片、音频和视频向量，支持 CPU 回退；需源码构建、OpenCL 头文件与运行时，另下载 GGUF 权重及媒体投影器，视频需 FFmpeg。长序列会回退到 CPU，大图处理可能较慢。
 
-- [GemmaEmbed](https://github.com/maralski/gemma-embed-swift) - 使用自带 Metal 内核的 Swift 包，在进程内生成 EmbeddingGemma2 文本、图片及图文混合向量；需要 Apple silicon、macOS 14+、Swift 6，并另下载 Q8_0 GGUF 权重（图片还需投影器），不支持音频。
+- [GemmaEmbed](https://github.com/maralski/gemma-embed-swift) - 使用自带 Metal 内核的 Swift 包，在进程内生成 EmbeddingGemma2 文本、图片、音频及混合输入向量；需要 Apple silicon、macOS 14+、Swift 6，并另下载 Q8_0 GGUF 权重及图片／音频投影器。音频超出 token 预算时会被拒绝而非截断，默认预算约容纳 5 分 27 秒。
 
 - [OpenVLCLIP](https://github.com/kotadymo/openvlclip) - 非官方 Python 库，通过 Transformers 在 CPU 或 CUDA 上提供 EmbeddingGemma2 图片、文本编码及可选视频帧搜索；接口借鉴 OpenCLIP，但不能直接替换它，需要 Python 3.12–3.14（不含 3.14.1）。 原名 openclip-gemma；[迁移指南](https://github.com/kotadymo/openvlclip/blob/main/docs/migration-v0.5.0.md)要求更换包名与导入名，不提供旧导入名兼容。
 
