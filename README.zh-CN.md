@@ -52,6 +52,7 @@ DigUp [v0.7.0-beta.3](https://github.com/ARahim3/DigUp/releases/tag/v0.7.0-beta.
 - [Recall](https://github.com/pdstn12/Recall) - Linux 本地多模态文件搜索，基于 Rust、GTK 4 和 llama.cpp；早期项目。
 - [rummage](https://github.com/av/rummage) - 基于 llama.cpp 的本地多模态文件搜索，提供 CLI、网页、HTTP API 及页码和时间点跳转，支持 CPU、CUDA、ROCm 或 Vulkan；Linux 安装包要求 glibc 2.39+ 和 x86-64-v3，模型另行下载，视频需 FFmpeg，PDF 页面图像需 Poppler。
 - [sift-it](https://github.com/jwa91/sift-it) - 基于 Rust、EmbeddingGemma2 和 llama.cpp 的终端文档、图片、录音、视频与代码搜索，支持页码、时间点、行号跳转、JSON 输出及 JSON Lines 前端接口；需要 Apple silicon、macOS 14+ 并下载模型，转写文本检索使用独立语音模型。 main 分支新增 stdio MCP 服务，可只读搜索文件及 Claude Code/Codex 对话、读取命中内容（需手动添加会话目录）；发布安装包前需源码构建，交给云端助手的片段会离开本机。
+- [Semantic Search](https://github.com/nikusti/semantic-search) - 通过 MLX 或 Core ML 运行 EmbeddingGemma2 的 Tinycast／Raycast 本地文件与 Apple Photos 搜索扩展；需 Apple silicon macOS 26+、手动安装并另下载模型。配套引擎未签名；扫描 PDF 需有文本层，音频按声音检索而非转写文本，Core ML 文本输入限 512 token。
 - [Sonicproof](https://github.com/kanaworksai-hue/sonicproof) - 本地检查生成音频与提示词的匹配程度、筛选多个生成结果及搜索音效库，提供 CLI、网页和 MCP，支持 CPU、CUDA 或 Apple silicon；相似度评分仍需试听确认，短促声音尤其容易混淆。
 - [Trawl](https://github.com/Crane-AI-Labs/trawl) - 在 Android 11+、64 位手机上通过 EmbeddingGemma2 本地搜索照片、文档、视频和语音笔记；模型需另下载，搜索以英语效果为优先，转写使用独立的英语语音识别模型。32 位 Go 版不提供语义搜索。
 - [VectorDash](https://github.com/ampersandru/VectorDash) - Windows 本地文档、图片、音频和视频搜索，通过 llama.cpp 支持页码与时间点跳转；安装包未签名。[0.3.42 版](https://github.com/ampersandru/VectorDash/releases/tag/v0.3.42) 新增测试版以图搜图，覆盖已索引文件和保留的剪贴板图片，需要兼容的视觉向量（不含仅 Quick 或仅 OCR 条目），并提供可选的 AI 本地检索。远端图片查询会发送图片给配置的向量服务器，AI 本地检索会发送检索片段给配置的 AI 服务器。Windows 10 x64 2004+ 与可选 RAW 支持（默认关闭，仅用于 Full 来源）仍为测试版，Windows 11 为主要测试平台。
@@ -73,6 +74,7 @@ Core ML 适配于 **2026-10-14** 核对文档与实现；作者报告的数值�
 - [Multimodal Typed Decision](https://huggingface.co/Danny-Dasilva/embeddinggemma-2-multimodal-typed-decision) - EmbeddingGemma2 微调模型，支持文字、图片和视频的选择、布尔判断与等级评分，以及可选的目标框定位；需配套运行时代码，主要面向英语。开发中重复使用了评测集，部分训练数据限非商业、仅供研究或未声明许可。
 
 - [US-State-Law-EmbeddingGemma-2](https://huggingface.co/CSI-lab/US-State-Law-EmbeddingGemma-2) - 用英文问题检索华盛顿州 RCW 法条的 LoRA 微调模型，采用合成问题与法条配对数据训练；提供合并权重与 [Q4_K_M GGUF](https://huggingface.co/CSI-lab/US-state-law-EmbeddingGemma-2-GGUF)。法律领域范围限于华盛顿州，并非面向全美法律。
+- [Retail EmbeddingGemma2 TW](https://huggingface.co/UNI-PIC/retail-embeddinggemma-2-tw) - 将台湾繁体中文购物查询匹配到商品标题的纯文本微调模型，提供 Sentence Transformers 权重；使用私有零售商品库，按 192 token 训练。评测在同一商品库上使用 LLM 相关性评分，其他商品库与语言尚未评测。
 - [Bharat-Embed 270M](https://huggingface.co/eulogik/bharat-embed-270m-gemma2) - 面向印地语和印英混合语检索的纯文本 LoRA 微调模型，提供[训练与导出代码](https://github.com/eulogik/Bharat-Embed)；按 256 token 训练，长文档效果尚未评测。
 - [EmbeddingGemma2 Korean](https://huggingface.co/jonpark0/embeddinggemma-2-ko) - 面向韩语检索的微调模型，与基础权重混合并保留多模态输入；需要 Sentence Transformers 6.1+、Transformers 5.18+，作者报告韩语文本到语音检索效果小幅下降。
 - [eg2-transcribe](https://github.com/john-rocky/eg2-transcribe) - 用冻结的 EmbeddingGemma2 音频编码器和训练后的读取器做英语转写，提供 Android 8+ arm64 的 LiteRT 实现及 iOS/macOS 27 的 Core AI 实现；需自行构建应用并另下载模型，仅用英语朗读语音训练，输出不带标点或大写。
