@@ -95,6 +95,7 @@ Bharat-Embed 于 **2026-10-14** 核对模型卡、配置与已发布文件；未
 ## 从这里开始
 
 - [官方模型主页](https://deepmind.google/models/gemma/embeddinggemma/) - Google DeepMind 模型介绍与资源入口。
+- [研究论文](https://arxiv.org/abs/2610.37364) - 统一多模态表示、分阶段训练、消融实验与资源受限设备的部署设计。
 - [模型卡](https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2) - 架构、评测、输入约束与局限。
 - [原始权重](https://huggingface.co/google/embeddinggemma-2) - Google 官方权重与配置。
 - [开发者指南](https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/) - 架构概览、模块化加载与应用示例。
@@ -119,6 +120,7 @@ Bharat-Embed 于 **2026-10-14** 核对模型卡、配置与已发布文件；未
 - [Transformers 模型文档](https://huggingface.co/docs/transformers/model_doc/embedding_gemma2) - 底层模型与处理器 API。
 - [最小多模态搜索示例](https://github.com/ranjankndev/embeddinggemma2-search) - 用少量 Python 文件和 NumPy 向量实现本地文本、图片、音频与视频检索，无需数据库或 UI。
 - [Gemma-Lens](https://github.com/johnrobinsn/gemma-lens) - 用文字、麦克风录音或图片检索 COCO 图片与 ESC-50 音频的示例，直接计算余弦相似度，附[实现教程](https://www.storminthecastle.com/posts/gemma_lens/)；支持 CPU 或 CUDA，ESC-50 音频限非商业使用。
+- [FiftyOne 跨模态搜索](https://voxel51.com/blog/embeddinggemma-2-cross-modal-video-search) - 通过[远程模型适配器](https://github.com/harpreetsahota204/EmbeddingGemma2)和[检索面板](https://github.com/harpreetsahota204/cross_modal_similarity_search)，用文字、图片、录音或摄像头搜索媒体数据集的教程；需 FiftyOne 1.22+、额外依赖并下载模型。音频默认取前 30 秒，摄像头与麦克风需 localhost 或 HTTPS。
 - [UI Search](https://github.com/sai-prakash/ui-screenshot-search) - 在浏览器中用文字或截图搜索示例组件、IBM Carbon 和 GitHub Primer，提供可复用的 Storybook 索引脚本；截图检索准确率尚未评测。
 
 Sentence Transformers 教程要求 **6.1.0+**。
